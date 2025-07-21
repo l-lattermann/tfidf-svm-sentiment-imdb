@@ -17,7 +17,7 @@ if str(PROJECT_ROOT) not in sys.path:
 
 # ─── Project Module Imports ──────────────────────────────────────────────────────
 from src.config.paths import TRAINING_PARAMS
-from src.data.tfidf_dataset import TfidfDataset
+from src.data.data_classes import TfidfDataset
 from src.config import logging_config
 
 

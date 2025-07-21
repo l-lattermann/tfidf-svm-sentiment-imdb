@@ -22,7 +22,7 @@ if str(PROJECT_ROOT) not in sys.path:
 
 # ─── Project Imports ─────────────────────────────────────────────────────────────
 from src.data import data_loader
-from src.data.tfidf_dataset import TfidfDataset
+from src.data.data_classes import TfidfDataset
 
 def test_load_texts_from_folder(tmp_path):
     """

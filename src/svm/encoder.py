@@ -4,7 +4,7 @@
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 # ─── Project Imports ─────────────────────────────────────────────────────────────
-from src.data.tfidf_dataset import TfidfDataset
+from src.data.data_classes import TfidfDataset
 from src.config import logging_config
 
 

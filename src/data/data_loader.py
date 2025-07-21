@@ -12,7 +12,7 @@ from sklearn.model_selection import GridSearchCV
 from joblib import dump, load
 
 # ─── Project Imports ──────────────────────────────────────────────────────────────
-from src.data.tfidf_dataset import TfidfDataset
+from src.data.data_classes import TfidfDataset
 from src.config.paths import CLEANED_DATA_TXT_DIR, ENCODED_DATA_DIR
 
 # ─── Set up logging ───────────────────────────────────────────────────────────────
