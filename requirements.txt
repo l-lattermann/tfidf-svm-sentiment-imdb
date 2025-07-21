@@ -1,0 +1,8 @@
+aiohttp==3.12.13
+datasets==3.6.0
+pytest-cov==6.2.1
+pytest-env==1.1.5
+scikit-learn==1.7.0
+spacy==3.8.7
+tinycss2==1.4.0
+PyYAML==6.0.2

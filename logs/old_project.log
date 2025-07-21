@@ -1,0 +1,375 @@
+2025-07-15 20:21:21,313 - src.preprocessing.lemmatization - INFO - Using existing spaCy model 'en_core_web_sm'.
+2025-07-15 20:21:21,854 - __main__ - INFO - Running in PRODUCTION mode.
+2025-07-15 20:21:21,854 - __main__ - INFO - Running full dataset preparation...
+2025-07-15 20:21:21,854 - src.data.download_data - INFO - Starting IMDb dataset download and preparation...
+2025-07-15 20:21:21,855 - src.data.download_data - INFO - Output directory structure created at /Users/lau/Documents/Uni/4. Semester/Project NLP/Project/data/aclImdb
+2025-07-15 20:21:34,632 - src.data.download_data - INFO - IMDb dataset loaded successfully.
+2025-07-15 20:21:34,659 - src.data.download_data - INFO - Split ratio set to 80/20 for training and testing.
+2025-07-15 20:21:34,659 - src.data.download_data - INFO - Number of training samples: 40000
+2025-07-15 20:21:34,660 - src.data.download_data - INFO - Number of testing samples: 10000
+2025-07-15 20:22:05,239 - src.data.download_data - INFO - Saved train and test splits to /Users/lau/Documents/Uni/4. Semester/Project NLP/Project/data/aclImdb
+2025-07-15 20:22:17,228 - src.data.download_data - INFO - Zipped the dataset to /Users/lau/Documents/Uni/4. Semester/Project NLP/Project/data/aclImdb/aclImdb.zip
+2025-07-15 20:22:17,229 - __main__ - INFO - Loading datasets from /Users/lau/Documents/Uni/4. Semester/Project NLP/Project/data/aclImdb/train and /Users/lau/Documents/Uni/4. Semester/Project NLP/Project/data/aclImdb/test
+2025-07-15 20:22:17,229 - src.data.data_loader - INFO - Loading text files from /Users/lau/Documents/Uni/4. Semester/Project NLP/Project/data/aclImdb/train with test_mode=False and sample_count=0
+2025-07-15 20:22:22,874 - src.data.data_loader - INFO - Loaded 40000 samples from /Users/lau/Documents/Uni/4. Semester/Project NLP/Project/data/aclImdb/train
+2025-07-15 20:22:22,875 - src.data.data_loader - INFO - Loading text files from /Users/lau/Documents/Uni/4. Semester/Project NLP/Project/data/aclImdb/test with test_mode=False and sample_count=0
+2025-07-15 20:22:24,419 - src.data.data_loader - INFO - Loaded 10000 samples from /Users/lau/Documents/Uni/4. Semester/Project NLP/Project/data/aclImdb/test
+2025-07-15 20:56:18,065 - src.data.data_loader - INFO - Saving dataset to /Users/lau/Documents/Uni/4. Semester/Project NLP/Project/data/cleaned_txt/cleaned_dataset_txt for split 'train'
+2025-07-15 20:56:18,065 - src.data.data_loader - INFO - Created directory: /Users/lau/Documents/Uni/4. Semester/Project NLP/Project/data/cleaned_txt/cleaned_dataset_txt/train/neg
+2025-07-15 20:56:18,065 - src.data.data_loader - INFO - Created directory: /Users/lau/Documents/Uni/4. Semester/Project NLP/Project/data/cleaned_txt/cleaned_dataset_txt/train/pos
+2025-07-15 20:56:22,710 - src.data.data_loader - INFO - Saved 40000 files to /Users/lau/Documents/Uni/4. Semester/Project NLP/Project/data/cleaned_txt/cleaned_dataset_txt/train
+2025-07-15 20:56:22,710 - src.data.data_loader - INFO - Saving dataset to /Users/lau/Documents/Uni/4. Semester/Project NLP/Project/data/cleaned_txt/cleaned_dataset_txt for split 'test'
+2025-07-15 20:56:22,710 - src.data.data_loader - INFO - Created directory: /Users/lau/Documents/Uni/4. Semester/Project NLP/Project/data/cleaned_txt/cleaned_dataset_txt/test/neg
+2025-07-15 20:56:22,710 - src.data.data_loader - INFO - Created directory: /Users/lau/Documents/Uni/4. Semester/Project NLP/Project/data/cleaned_txt/cleaned_dataset_txt/test/pos
+2025-07-15 20:56:23,804 - src.data.data_loader - INFO - Saved 10000 files to /Users/lau/Documents/Uni/4. Semester/Project NLP/Project/data/cleaned_txt/cleaned_dataset_txt/test
+2025-07-15 20:56:23,808 - __main__ - INFO - Using TF-IDF parameters: {'max_features': [50000, 400000, 300000], 'ngram_range': [(1, 2), (1, 3), (2, 3)], 'stop_words': ['english'], 'lowercase': [True], 'use_idf': [True], 'smooth_idf': [True], 'sublinear_tf': [True, False]}
+2025-07-15 20:56:23,808 - __main__ - INFO - Fine-tuning encoder. Generating multiple encoded datasets with different parameters.
+2025-07-15 20:56:23,808 - __main__ - INFO - Generated 18 combinations of parameters for fine-tuning.
+2025-07-15 20:56:23,808 - __main__ - INFO - Encoding dataset with parameters: {'max_features': 50000, 'ngram_range': (1, 2), 'stop_words': 'english', 'lowercase': True, 'use_idf': True, 'smooth_idf': True, 'sublinear_tf': True}
+2025-07-15 20:56:34,411 - src.data.data_loader - INFO - Saving encoded dataset to /Users/lau/Documents/Uni/4. Semester/Project NLP/Project/data/IMBD_tfidf/encoded__max_features=50000-ngram_range=1_2-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=True.joblib
+2025-07-15 20:56:34,878 - src.data.data_loader - INFO - Saved encoded dataset to /Users/lau/Documents/Uni/4. Semester/Project NLP/Project/data/IMBD_tfidf/encoded__max_features=50000-ngram_range=1_2-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=True.joblib
+2025-07-15 20:56:34,878 - __main__ - INFO - Encoded dataset saved to /Users/lau/Documents/Uni/4. Semester/Project NLP/Project/data/IMBD_tfidf/encoded__max_features=50000-ngram_range=1_2-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=True.joblib
+2025-07-15 20:56:34,879 - __main__ - INFO - Encoding dataset with parameters: {'max_features': 50000, 'ngram_range': (1, 2), 'stop_words': 'english', 'lowercase': True, 'use_idf': True, 'smooth_idf': True, 'sublinear_tf': False}
+2025-07-15 20:56:44,545 - src.data.data_loader - INFO - Saving encoded dataset to /Users/lau/Documents/Uni/4. Semester/Project NLP/Project/data/IMBD_tfidf/encoded__max_features=50000-ngram_range=1_2-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=False.joblib
+2025-07-15 20:56:44,987 - src.data.data_loader - INFO - Saved encoded dataset to /Users/lau/Documents/Uni/4. Semester/Project NLP/Project/data/IMBD_tfidf/encoded__max_features=50000-ngram_range=1_2-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=False.joblib
+2025-07-15 20:56:44,987 - __main__ - INFO - Encoded dataset saved to /Users/lau/Documents/Uni/4. Semester/Project NLP/Project/data/IMBD_tfidf/encoded__max_features=50000-ngram_range=1_2-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=False.joblib
+2025-07-15 20:56:44,987 - __main__ - INFO - Encoding dataset with parameters: {'max_features': 50000, 'ngram_range': (1, 3), 'stop_words': 'english', 'lowercase': True, 'use_idf': True, 'smooth_idf': True, 'sublinear_tf': True}
+2025-07-15 20:57:04,638 - src.data.data_loader - INFO - Saving encoded dataset to /Users/lau/Documents/Uni/4. Semester/Project NLP/Project/data/IMBD_tfidf/encoded__max_features=50000-ngram_range=1_3-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=True.joblib
+2025-07-15 20:57:05,063 - src.data.data_loader - INFO - Saved encoded dataset to /Users/lau/Documents/Uni/4. Semester/Project NLP/Project/data/IMBD_tfidf/encoded__max_features=50000-ngram_range=1_3-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=True.joblib
+2025-07-15 20:57:05,063 - __main__ - INFO - Encoded dataset saved to /Users/lau/Documents/Uni/4. Semester/Project NLP/Project/data/IMBD_tfidf/encoded__max_features=50000-ngram_range=1_3-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=True.joblib
+2025-07-15 20:57:05,063 - __main__ - INFO - Encoding dataset with parameters: {'max_features': 50000, 'ngram_range': (1, 3), 'stop_words': 'english', 'lowercase': True, 'use_idf': True, 'smooth_idf': True, 'sublinear_tf': False}
+2025-07-15 20:57:25,591 - src.data.data_loader - INFO - Saving encoded dataset to /Users/lau/Documents/Uni/4. Semester/Project NLP/Project/data/IMBD_tfidf/encoded__max_features=50000-ngram_range=1_3-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=False.joblib
+2025-07-15 20:57:26,032 - src.data.data_loader - INFO - Saved encoded dataset to /Users/lau/Documents/Uni/4. Semester/Project NLP/Project/data/IMBD_tfidf/encoded__max_features=50000-ngram_range=1_3-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=False.joblib
+2025-07-15 20:57:26,032 - __main__ - INFO - Encoded dataset saved to /Users/lau/Documents/Uni/4. Semester/Project NLP/Project/data/IMBD_tfidf/encoded__max_features=50000-ngram_range=1_3-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=False.joblib
+2025-07-15 20:57:26,032 - __main__ - INFO - Encoding dataset with parameters: {'max_features': 50000, 'ngram_range': (2, 3), 'stop_words': 'english', 'lowercase': True, 'use_idf': True, 'smooth_idf': True, 'sublinear_tf': True}
+2025-07-15 20:57:44,465 - src.data.data_loader - INFO - Saving encoded dataset to /Users/lau/Documents/Uni/4. Semester/Project NLP/Project/data/IMBD_tfidf/encoded__max_features=50000-ngram_range=2_3-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=True.joblib
+2025-07-15 20:57:45,168 - src.data.data_loader - INFO - Saved encoded dataset to /Users/lau/Documents/Uni/4. Semester/Project NLP/Project/data/IMBD_tfidf/encoded__max_features=50000-ngram_range=2_3-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=True.joblib
+2025-07-15 20:57:45,168 - __main__ - INFO - Encoded dataset saved to /Users/lau/Documents/Uni/4. Semester/Project NLP/Project/data/IMBD_tfidf/encoded__max_features=50000-ngram_range=2_3-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=True.joblib
+2025-07-15 20:57:45,168 - __main__ - INFO - Encoding dataset with parameters: {'max_features': 50000, 'ngram_range': (2, 3), 'stop_words': 'english', 'lowercase': True, 'use_idf': True, 'smooth_idf': True, 'sublinear_tf': False}
+2025-07-15 20:58:02,936 - src.data.data_loader - INFO - Saving encoded dataset to /Users/lau/Documents/Uni/4. Semester/Project NLP/Project/data/IMBD_tfidf/encoded__max_features=50000-ngram_range=2_3-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=False.joblib
+2025-07-15 20:58:03,357 - src.data.data_loader - INFO - Saved encoded dataset to /Users/lau/Documents/Uni/4. Semester/Project NLP/Project/data/IMBD_tfidf/encoded__max_features=50000-ngram_range=2_3-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=False.joblib
+2025-07-15 20:58:03,357 - __main__ - INFO - Encoded dataset saved to /Users/lau/Documents/Uni/4. Semester/Project NLP/Project/data/IMBD_tfidf/encoded__max_features=50000-ngram_range=2_3-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=False.joblib
+2025-07-15 20:58:03,357 - __main__ - INFO - Encoding dataset with parameters: {'max_features': 400000, 'ngram_range': (1, 2), 'stop_words': 'english', 'lowercase': True, 'use_idf': True, 'smooth_idf': True, 'sublinear_tf': True}
+2025-07-15 20:58:12,555 - src.data.data_loader - INFO - Saving encoded dataset to /Users/lau/Documents/Uni/4. Semester/Project NLP/Project/data/IMBD_tfidf/encoded__max_features=400000-ngram_range=1_2-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=True.joblib
+2025-07-15 20:58:15,888 - src.data.data_loader - INFO - Saved encoded dataset to /Users/lau/Documents/Uni/4. Semester/Project NLP/Project/data/IMBD_tfidf/encoded__max_features=400000-ngram_range=1_2-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=True.joblib
+2025-07-15 20:58:15,889 - __main__ - INFO - Encoded dataset saved to /Users/lau/Documents/Uni/4. Semester/Project NLP/Project/data/IMBD_tfidf/encoded__max_features=400000-ngram_range=1_2-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=True.joblib
+2025-07-15 20:58:15,889 - __main__ - INFO - Encoding dataset with parameters: {'max_features': 400000, 'ngram_range': (1, 2), 'stop_words': 'english', 'lowercase': True, 'use_idf': True, 'smooth_idf': True, 'sublinear_tf': False}
+2025-07-15 20:58:25,699 - src.data.data_loader - INFO - Saving encoded dataset to /Users/lau/Documents/Uni/4. Semester/Project NLP/Project/data/IMBD_tfidf/encoded__max_features=400000-ngram_range=1_2-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=False.joblib
+2025-07-15 20:58:29,192 - src.data.data_loader - INFO - Saved encoded dataset to /Users/lau/Documents/Uni/4. Semester/Project NLP/Project/data/IMBD_tfidf/encoded__max_features=400000-ngram_range=1_2-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=False.joblib
+2025-07-15 20:58:29,193 - __main__ - INFO - Encoded dataset saved to /Users/lau/Documents/Uni/4. Semester/Project NLP/Project/data/IMBD_tfidf/encoded__max_features=400000-ngram_range=1_2-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=False.joblib
+2025-07-15 20:58:29,193 - __main__ - INFO - Encoding dataset with parameters: {'max_features': 400000, 'ngram_range': (1, 3), 'stop_words': 'english', 'lowercase': True, 'use_idf': True, 'smooth_idf': True, 'sublinear_tf': True}
+2025-07-15 20:58:50,236 - src.data.data_loader - INFO - Saving encoded dataset to /Users/lau/Documents/Uni/4. Semester/Project NLP/Project/data/IMBD_tfidf/encoded__max_features=400000-ngram_range=1_3-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=True.joblib
+2025-07-15 20:58:54,060 - src.data.data_loader - INFO - Saved encoded dataset to /Users/lau/Documents/Uni/4. Semester/Project NLP/Project/data/IMBD_tfidf/encoded__max_features=400000-ngram_range=1_3-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=True.joblib
+2025-07-15 20:58:54,062 - __main__ - INFO - Encoded dataset saved to /Users/lau/Documents/Uni/4. Semester/Project NLP/Project/data/IMBD_tfidf/encoded__max_features=400000-ngram_range=1_3-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=True.joblib
+2025-07-15 20:58:54,062 - __main__ - INFO - Encoding dataset with parameters: {'max_features': 400000, 'ngram_range': (1, 3), 'stop_words': 'english', 'lowercase': True, 'use_idf': True, 'smooth_idf': True, 'sublinear_tf': False}
+2025-07-15 20:59:14,433 - src.data.data_loader - INFO - Saving encoded dataset to /Users/lau/Documents/Uni/4. Semester/Project NLP/Project/data/IMBD_tfidf/encoded__max_features=400000-ngram_range=1_3-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=False.joblib
+2025-07-15 20:59:17,765 - src.data.data_loader - INFO - Saved encoded dataset to /Users/lau/Documents/Uni/4. Semester/Project NLP/Project/data/IMBD_tfidf/encoded__max_features=400000-ngram_range=1_3-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=False.joblib
+2025-07-15 20:59:17,765 - __main__ - INFO - Encoded dataset saved to /Users/lau/Documents/Uni/4. Semester/Project NLP/Project/data/IMBD_tfidf/encoded__max_features=400000-ngram_range=1_3-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=False.joblib
+2025-07-15 20:59:17,765 - __main__ - INFO - Encoding dataset with parameters: {'max_features': 400000, 'ngram_range': (2, 3), 'stop_words': 'english', 'lowercase': True, 'use_idf': True, 'smooth_idf': True, 'sublinear_tf': True}
+2025-07-15 20:59:36,093 - src.data.data_loader - INFO - Saving encoded dataset to /Users/lau/Documents/Uni/4. Semester/Project NLP/Project/data/IMBD_tfidf/encoded__max_features=400000-ngram_range=2_3-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=True.joblib
+2025-07-15 20:59:39,844 - src.data.data_loader - INFO - Saved encoded dataset to /Users/lau/Documents/Uni/4. Semester/Project NLP/Project/data/IMBD_tfidf/encoded__max_features=400000-ngram_range=2_3-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=True.joblib
+2025-07-15 20:59:39,845 - __main__ - INFO - Encoded dataset saved to /Users/lau/Documents/Uni/4. Semester/Project NLP/Project/data/IMBD_tfidf/encoded__max_features=400000-ngram_range=2_3-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=True.joblib
+2025-07-15 20:59:39,845 - __main__ - INFO - Encoding dataset with parameters: {'max_features': 400000, 'ngram_range': (2, 3), 'stop_words': 'english', 'lowercase': True, 'use_idf': True, 'smooth_idf': True, 'sublinear_tf': False}
+2025-07-15 20:59:59,270 - src.data.data_loader - INFO - Saving encoded dataset to /Users/lau/Documents/Uni/4. Semester/Project NLP/Project/data/IMBD_tfidf/encoded__max_features=400000-ngram_range=2_3-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=False.joblib
+2025-07-15 21:00:02,638 - src.data.data_loader - INFO - Saved encoded dataset to /Users/lau/Documents/Uni/4. Semester/Project NLP/Project/data/IMBD_tfidf/encoded__max_features=400000-ngram_range=2_3-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=False.joblib
+2025-07-15 21:00:02,639 - __main__ - INFO - Encoded dataset saved to /Users/lau/Documents/Uni/4. Semester/Project NLP/Project/data/IMBD_tfidf/encoded__max_features=400000-ngram_range=2_3-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=False.joblib
+2025-07-15 21:00:02,639 - __main__ - INFO - Encoding dataset with parameters: {'max_features': 300000, 'ngram_range': (1, 2), 'stop_words': 'english', 'lowercase': True, 'use_idf': True, 'smooth_idf': True, 'sublinear_tf': True}
+2025-07-15 21:00:12,086 - src.data.data_loader - INFO - Saving encoded dataset to /Users/lau/Documents/Uni/4. Semester/Project NLP/Project/data/IMBD_tfidf/encoded__max_features=300000-ngram_range=1_2-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=True.joblib
+2025-07-15 21:00:14,632 - src.data.data_loader - INFO - Saved encoded dataset to /Users/lau/Documents/Uni/4. Semester/Project NLP/Project/data/IMBD_tfidf/encoded__max_features=300000-ngram_range=1_2-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=True.joblib
+2025-07-15 21:00:14,634 - __main__ - INFO - Encoded dataset saved to /Users/lau/Documents/Uni/4. Semester/Project NLP/Project/data/IMBD_tfidf/encoded__max_features=300000-ngram_range=1_2-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=True.joblib
+2025-07-15 21:00:14,634 - __main__ - INFO - Encoding dataset with parameters: {'max_features': 300000, 'ngram_range': (1, 2), 'stop_words': 'english', 'lowercase': True, 'use_idf': True, 'smooth_idf': True, 'sublinear_tf': False}
+2025-07-15 21:00:23,992 - src.data.data_loader - INFO - Saving encoded dataset to /Users/lau/Documents/Uni/4. Semester/Project NLP/Project/data/IMBD_tfidf/encoded__max_features=300000-ngram_range=1_2-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=False.joblib
+2025-07-15 21:00:26,527 - src.data.data_loader - INFO - Saved encoded dataset to /Users/lau/Documents/Uni/4. Semester/Project NLP/Project/data/IMBD_tfidf/encoded__max_features=300000-ngram_range=1_2-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=False.joblib
+2025-07-15 21:00:26,527 - __main__ - INFO - Encoded dataset saved to /Users/lau/Documents/Uni/4. Semester/Project NLP/Project/data/IMBD_tfidf/encoded__max_features=300000-ngram_range=1_2-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=False.joblib
+2025-07-15 21:00:26,527 - __main__ - INFO - Encoding dataset with parameters: {'max_features': 300000, 'ngram_range': (1, 3), 'stop_words': 'english', 'lowercase': True, 'use_idf': True, 'smooth_idf': True, 'sublinear_tf': True}
+2025-07-15 21:00:50,334 - src.data.data_loader - INFO - Saving encoded dataset to /Users/lau/Documents/Uni/4. Semester/Project NLP/Project/data/IMBD_tfidf/encoded__max_features=300000-ngram_range=1_3-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=True.joblib
+2025-07-15 21:00:53,244 - src.data.data_loader - INFO - Saved encoded dataset to /Users/lau/Documents/Uni/4. Semester/Project NLP/Project/data/IMBD_tfidf/encoded__max_features=300000-ngram_range=1_3-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=True.joblib
+2025-07-15 21:00:53,244 - __main__ - INFO - Encoded dataset saved to /Users/lau/Documents/Uni/4. Semester/Project NLP/Project/data/IMBD_tfidf/encoded__max_features=300000-ngram_range=1_3-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=True.joblib
+2025-07-15 21:00:53,244 - __main__ - INFO - Encoding dataset with parameters: {'max_features': 300000, 'ngram_range': (1, 3), 'stop_words': 'english', 'lowercase': True, 'use_idf': True, 'smooth_idf': True, 'sublinear_tf': False}
+2025-07-15 21:01:14,945 - src.data.data_loader - INFO - Saving encoded dataset to /Users/lau/Documents/Uni/4. Semester/Project NLP/Project/data/IMBD_tfidf/encoded__max_features=300000-ngram_range=1_3-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=False.joblib
+2025-07-15 21:01:17,469 - src.data.data_loader - INFO - Saved encoded dataset to /Users/lau/Documents/Uni/4. Semester/Project NLP/Project/data/IMBD_tfidf/encoded__max_features=300000-ngram_range=1_3-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=False.joblib
+2025-07-15 21:01:17,470 - __main__ - INFO - Encoded dataset saved to /Users/lau/Documents/Uni/4. Semester/Project NLP/Project/data/IMBD_tfidf/encoded__max_features=300000-ngram_range=1_3-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=False.joblib
+2025-07-15 21:01:17,470 - __main__ - INFO - Encoding dataset with parameters: {'max_features': 300000, 'ngram_range': (2, 3), 'stop_words': 'english', 'lowercase': True, 'use_idf': True, 'smooth_idf': True, 'sublinear_tf': True}
+2025-07-15 21:01:38,118 - src.data.data_loader - INFO - Saving encoded dataset to /Users/lau/Documents/Uni/4. Semester/Project NLP/Project/data/IMBD_tfidf/encoded__max_features=300000-ngram_range=2_3-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=True.joblib
+2025-07-15 21:01:40,661 - src.data.data_loader - INFO - Saved encoded dataset to /Users/lau/Documents/Uni/4. Semester/Project NLP/Project/data/IMBD_tfidf/encoded__max_features=300000-ngram_range=2_3-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=True.joblib
+2025-07-15 21:01:40,661 - __main__ - INFO - Encoded dataset saved to /Users/lau/Documents/Uni/4. Semester/Project NLP/Project/data/IMBD_tfidf/encoded__max_features=300000-ngram_range=2_3-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=True.joblib
+2025-07-15 21:01:40,661 - __main__ - INFO - Encoding dataset with parameters: {'max_features': 300000, 'ngram_range': (2, 3), 'stop_words': 'english', 'lowercase': True, 'use_idf': True, 'smooth_idf': True, 'sublinear_tf': False}
+2025-07-15 21:02:01,351 - src.data.data_loader - INFO - Saving encoded dataset to /Users/lau/Documents/Uni/4. Semester/Project NLP/Project/data/IMBD_tfidf/encoded__max_features=300000-ngram_range=2_3-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=False.joblib
+2025-07-15 21:02:04,253 - src.data.data_loader - INFO - Saved encoded dataset to /Users/lau/Documents/Uni/4. Semester/Project NLP/Project/data/IMBD_tfidf/encoded__max_features=300000-ngram_range=2_3-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=False.joblib
+2025-07-15 21:02:04,253 - __main__ - INFO - Encoded dataset saved to /Users/lau/Documents/Uni/4. Semester/Project NLP/Project/data/IMBD_tfidf/encoded__max_features=300000-ngram_range=2_3-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=False.joblib
+2025-07-15 21:02:04,253 - __main__ - INFO - Fine-tuning encoder. Saving only the best model.
+2025-07-15 21:02:04,253 - __main__ - INFO - Training SVM model with params: {'max_features': 50000, 'ngram_range': (1, 2), 'stop_words': 'english', 'lowercase': True, 'use_idf': True, 'smooth_idf': True, 'sublinear_tf': True}
+2025-07-15 21:02:04,253 - src.svm.training - INFO - Starting SVM model training...
+2025-07-15 21:02:04,253 - src.svm.training - INFO - Initialized LinearSVC model.
+2025-07-15 21:02:04,253 - src.svm.training - INFO - Using parameter grid for Grid Search: {'C': [0.5, 1, 2], 'tol': [1e-05, 0.0001, 0.001], 'max_iter': [1000, 2000, 3000, 4000], 'class_weight': [None, 'balanced']}
+2025-07-15 21:02:23,696 - src.svm.training - INFO - Best parameters found: {'C': 0.5, 'class_weight': None, 'max_iter': 2000, 'tol': 0.001}
+2025-07-15 21:02:23,742 - src.svm.training - INFO - Classification Report:
+              precision    recall  f1-score   support
+
+         neg       0.91      0.88      0.90      4968
+         pos       0.89      0.91      0.90      5032
+
+    accuracy                           0.90     10000
+   macro avg       0.90      0.90      0.90     10000
+weighted avg       0.90      0.90      0.90     10000
+
+2025-07-15 21:02:23,743 - __main__ - INFO - Training SVM model with params: {'max_features': 50000, 'ngram_range': (1, 2), 'stop_words': 'english', 'lowercase': True, 'use_idf': True, 'smooth_idf': True, 'sublinear_tf': False}
+2025-07-15 21:02:23,743 - src.svm.training - INFO - Starting SVM model training...
+2025-07-15 21:02:23,743 - src.svm.training - INFO - Initialized LinearSVC model.
+2025-07-15 21:02:23,743 - src.svm.training - INFO - Using parameter grid for Grid Search: {'C': [0.5, 1, 2], 'tol': [1e-05, 0.0001, 0.001], 'max_iter': [1000, 2000, 3000, 4000], 'class_weight': [None, 'balanced']}
+2025-07-15 21:02:41,767 - src.svm.training - INFO - Best parameters found: {'C': 0.5, 'class_weight': 'balanced', 'max_iter': 1000, 'tol': 1e-05}
+2025-07-15 21:02:41,810 - src.svm.training - INFO - Classification Report:
+              precision    recall  f1-score   support
+
+         neg       0.91      0.88      0.89      4968
+         pos       0.89      0.91      0.90      5032
+
+    accuracy                           0.90     10000
+   macro avg       0.90      0.90      0.90     10000
+weighted avg       0.90      0.90      0.90     10000
+
+2025-07-15 21:02:41,811 - __main__ - INFO - Training SVM model with params: {'max_features': 50000, 'ngram_range': (1, 3), 'stop_words': 'english', 'lowercase': True, 'use_idf': True, 'smooth_idf': True, 'sublinear_tf': True}
+2025-07-15 21:02:41,811 - src.svm.training - INFO - Starting SVM model training...
+2025-07-15 21:02:41,811 - src.svm.training - INFO - Initialized LinearSVC model.
+2025-07-15 21:02:41,811 - src.svm.training - INFO - Using parameter grid for Grid Search: {'C': [0.5, 1, 2], 'tol': [1e-05, 0.0001, 0.001], 'max_iter': [1000, 2000, 3000, 4000], 'class_weight': [None, 'balanced']}
+2025-07-15 21:02:59,531 - src.svm.training - INFO - Best parameters found: {'C': 0.5, 'class_weight': 'balanced', 'max_iter': 1000, 'tol': 1e-05}
+2025-07-15 21:02:59,568 - src.svm.training - INFO - Classification Report:
+              precision    recall  f1-score   support
+
+         neg       0.91      0.88      0.90      4968
+         pos       0.89      0.91      0.90      5032
+
+    accuracy                           0.90     10000
+   macro avg       0.90      0.90      0.90     10000
+weighted avg       0.90      0.90      0.90     10000
+
+2025-07-15 21:02:59,568 - __main__ - INFO - Training SVM model with params: {'max_features': 50000, 'ngram_range': (1, 3), 'stop_words': 'english', 'lowercase': True, 'use_idf': True, 'smooth_idf': True, 'sublinear_tf': False}
+2025-07-15 21:02:59,568 - src.svm.training - INFO - Starting SVM model training...
+2025-07-15 21:02:59,568 - src.svm.training - INFO - Initialized LinearSVC model.
+2025-07-15 21:02:59,568 - src.svm.training - INFO - Using parameter grid for Grid Search: {'C': [0.5, 1, 2], 'tol': [1e-05, 0.0001, 0.001], 'max_iter': [1000, 2000, 3000, 4000], 'class_weight': [None, 'balanced']}
+2025-07-15 21:03:17,791 - src.svm.training - INFO - Best parameters found: {'C': 0.5, 'class_weight': 'balanced', 'max_iter': 1000, 'tol': 1e-05}
+2025-07-15 21:03:17,828 - src.svm.training - INFO - Classification Report:
+              precision    recall  f1-score   support
+
+         neg       0.91      0.88      0.89      4968
+         pos       0.88      0.91      0.90      5032
+
+    accuracy                           0.90     10000
+   macro avg       0.90      0.90      0.90     10000
+weighted avg       0.90      0.90      0.90     10000
+
+2025-07-15 21:03:17,828 - __main__ - INFO - Training SVM model with params: {'max_features': 50000, 'ngram_range': (2, 3), 'stop_words': 'english', 'lowercase': True, 'use_idf': True, 'smooth_idf': True, 'sublinear_tf': True}
+2025-07-15 21:03:17,828 - src.svm.training - INFO - Starting SVM model training...
+2025-07-15 21:03:17,828 - src.svm.training - INFO - Initialized LinearSVC model.
+2025-07-15 21:03:17,828 - src.svm.training - INFO - Using parameter grid for Grid Search: {'C': [0.5, 1, 2], 'tol': [1e-05, 0.0001, 0.001], 'max_iter': [1000, 2000, 3000, 4000], 'class_weight': [None, 'balanced']}
+2025-07-15 21:03:27,648 - src.svm.training - INFO - Best parameters found: {'C': 0.5, 'class_weight': None, 'max_iter': 1000, 'tol': 1e-05}
+2025-07-15 21:03:27,663 - src.svm.training - INFO - Classification Report:
+              precision    recall  f1-score   support
+
+         neg       0.86      0.82      0.84      4968
+         pos       0.83      0.87      0.85      5032
+
+    accuracy                           0.85     10000
+   macro avg       0.85      0.84      0.84     10000
+weighted avg       0.85      0.85      0.84     10000
+
+2025-07-15 21:03:27,663 - __main__ - INFO - Training SVM model with params: {'max_features': 50000, 'ngram_range': (2, 3), 'stop_words': 'english', 'lowercase': True, 'use_idf': True, 'smooth_idf': True, 'sublinear_tf': False}
+2025-07-15 21:03:27,663 - src.svm.training - INFO - Starting SVM model training...
+2025-07-15 21:03:27,663 - src.svm.training - INFO - Initialized LinearSVC model.
+2025-07-15 21:03:27,663 - src.svm.training - INFO - Using parameter grid for Grid Search: {'C': [0.5, 1, 2], 'tol': [1e-05, 0.0001, 0.001], 'max_iter': [1000, 2000, 3000, 4000], 'class_weight': [None, 'balanced']}
+2025-07-15 21:03:37,512 - src.svm.training - INFO - Best parameters found: {'C': 0.5, 'class_weight': 'balanced', 'max_iter': 1000, 'tol': 1e-05}
+2025-07-15 21:03:37,528 - src.svm.training - INFO - Classification Report:
+              precision    recall  f1-score   support
+
+         neg       0.86      0.82      0.84      4968
+         pos       0.83      0.87      0.85      5032
+
+    accuracy                           0.84     10000
+   macro avg       0.85      0.84      0.84     10000
+weighted avg       0.85      0.84      0.84     10000
+
+2025-07-15 21:03:37,528 - __main__ - INFO - Training SVM model with params: {'max_features': 400000, 'ngram_range': (1, 2), 'stop_words': 'english', 'lowercase': True, 'use_idf': True, 'smooth_idf': True, 'sublinear_tf': True}
+2025-07-15 21:03:37,528 - src.svm.training - INFO - Starting SVM model training...
+2025-07-15 21:03:37,528 - src.svm.training - INFO - Initialized LinearSVC model.
+2025-07-15 21:03:37,528 - src.svm.training - INFO - Using parameter grid for Grid Search: {'C': [0.5, 1, 2], 'tol': [1e-05, 0.0001, 0.001], 'max_iter': [1000, 2000, 3000, 4000], 'class_weight': [None, 'balanced']}
+2025-07-15 21:04:12,793 - src.svm.training - INFO - Best parameters found: {'C': 1, 'class_weight': 'balanced', 'max_iter': 1000, 'tol': 1e-05}
+2025-07-15 21:04:12,844 - src.svm.training - INFO - Classification Report:
+              precision    recall  f1-score   support
+
+         neg       0.91      0.89      0.90      4968
+         pos       0.89      0.92      0.90      5032
+
+    accuracy                           0.90     10000
+   macro avg       0.90      0.90      0.90     10000
+weighted avg       0.90      0.90      0.90     10000
+
+2025-07-15 21:04:12,845 - __main__ - INFO - Training SVM model with params: {'max_features': 400000, 'ngram_range': (1, 2), 'stop_words': 'english', 'lowercase': True, 'use_idf': True, 'smooth_idf': True, 'sublinear_tf': False}
+2025-07-15 21:04:12,845 - src.svm.training - INFO - Starting SVM model training...
+2025-07-15 21:04:12,845 - src.svm.training - INFO - Initialized LinearSVC model.
+2025-07-15 21:04:12,845 - src.svm.training - INFO - Using parameter grid for Grid Search: {'C': [0.5, 1, 2], 'tol': [1e-05, 0.0001, 0.001], 'max_iter': [1000, 2000, 3000, 4000], 'class_weight': [None, 'balanced']}
+2025-07-15 21:04:47,725 - src.svm.training - INFO - Best parameters found: {'C': 1, 'class_weight': None, 'max_iter': 1000, 'tol': 1e-05}
+2025-07-15 21:04:47,774 - src.svm.training - INFO - Classification Report:
+              precision    recall  f1-score   support
+
+         neg       0.91      0.88      0.90      4968
+         pos       0.89      0.92      0.90      5032
+
+    accuracy                           0.90     10000
+   macro avg       0.90      0.90      0.90     10000
+weighted avg       0.90      0.90      0.90     10000
+
+2025-07-15 21:04:47,774 - __main__ - INFO - Training SVM model with params: {'max_features': 400000, 'ngram_range': (1, 3), 'stop_words': 'english', 'lowercase': True, 'use_idf': True, 'smooth_idf': True, 'sublinear_tf': True}
+2025-07-15 21:04:47,774 - src.svm.training - INFO - Starting SVM model training...
+2025-07-15 21:04:47,774 - src.svm.training - INFO - Initialized LinearSVC model.
+2025-07-15 21:04:47,774 - src.svm.training - INFO - Using parameter grid for Grid Search: {'C': [0.5, 1, 2], 'tol': [1e-05, 0.0001, 0.001], 'max_iter': [1000, 2000, 3000, 4000], 'class_weight': [None, 'balanced']}
+2025-07-15 21:05:22,990 - src.svm.training - INFO - Best parameters found: {'C': 1, 'class_weight': None, 'max_iter': 1000, 'tol': 1e-05}
+2025-07-15 21:05:23,043 - src.svm.training - INFO - Classification Report:
+              precision    recall  f1-score   support
+
+         neg       0.91      0.89      0.90      4968
+         pos       0.89      0.91      0.90      5032
+
+    accuracy                           0.90     10000
+   macro avg       0.90      0.90      0.90     10000
+weighted avg       0.90      0.90      0.90     10000
+
+2025-07-15 21:05:23,043 - __main__ - INFO - Training SVM model with params: {'max_features': 400000, 'ngram_range': (1, 3), 'stop_words': 'english', 'lowercase': True, 'use_idf': True, 'smooth_idf': True, 'sublinear_tf': False}
+2025-07-15 21:05:23,043 - src.svm.training - INFO - Starting SVM model training...
+2025-07-15 21:05:23,043 - src.svm.training - INFO - Initialized LinearSVC model.
+2025-07-15 21:05:23,043 - src.svm.training - INFO - Using parameter grid for Grid Search: {'C': [0.5, 1, 2], 'tol': [1e-05, 0.0001, 0.001], 'max_iter': [1000, 2000, 3000, 4000], 'class_weight': [None, 'balanced']}
+2025-07-15 21:05:58,236 - src.svm.training - INFO - Best parameters found: {'C': 1, 'class_weight': None, 'max_iter': 2000, 'tol': 0.001}
+2025-07-15 21:05:58,281 - src.svm.training - INFO - Classification Report:
+              precision    recall  f1-score   support
+
+         neg       0.91      0.88      0.90      4968
+         pos       0.89      0.92      0.90      5032
+
+    accuracy                           0.90     10000
+   macro avg       0.90      0.90      0.90     10000
+weighted avg       0.90      0.90      0.90     10000
+
+2025-07-15 21:05:58,281 - __main__ - INFO - Training SVM model with params: {'max_features': 400000, 'ngram_range': (2, 3), 'stop_words': 'english', 'lowercase': True, 'use_idf': True, 'smooth_idf': True, 'sublinear_tf': True}
+2025-07-15 21:05:58,281 - src.svm.training - INFO - Starting SVM model training...
+2025-07-15 21:05:58,281 - src.svm.training - INFO - Initialized LinearSVC model.
+2025-07-15 21:05:58,281 - src.svm.training - INFO - Using parameter grid for Grid Search: {'C': [0.5, 1, 2], 'tol': [1e-05, 0.0001, 0.001], 'max_iter': [1000, 2000, 3000, 4000], 'class_weight': [None, 'balanced']}
+2025-07-15 21:06:23,920 - src.svm.training - INFO - Best parameters found: {'C': 1, 'class_weight': None, 'max_iter': 1000, 'tol': 1e-05}
+2025-07-15 21:06:23,940 - src.svm.training - INFO - Classification Report:
+              precision    recall  f1-score   support
+
+         neg       0.88      0.84      0.86      4968
+         pos       0.85      0.88      0.86      5032
+
+    accuracy                           0.86     10000
+   macro avg       0.86      0.86      0.86     10000
+weighted avg       0.86      0.86      0.86     10000
+
+2025-07-15 21:06:23,940 - __main__ - INFO - Training SVM model with params: {'max_features': 400000, 'ngram_range': (2, 3), 'stop_words': 'english', 'lowercase': True, 'use_idf': True, 'smooth_idf': True, 'sublinear_tf': False}
+2025-07-15 21:06:23,940 - src.svm.training - INFO - Starting SVM model training...
+2025-07-15 21:06:23,940 - src.svm.training - INFO - Initialized LinearSVC model.
+2025-07-15 21:06:23,940 - src.svm.training - INFO - Using parameter grid for Grid Search: {'C': [0.5, 1, 2], 'tol': [1e-05, 0.0001, 0.001], 'max_iter': [1000, 2000, 3000, 4000], 'class_weight': [None, 'balanced']}
+2025-07-15 21:06:49,756 - src.svm.training - INFO - Best parameters found: {'C': 1, 'class_weight': None, 'max_iter': 1000, 'tol': 1e-05}
+2025-07-15 21:06:49,778 - src.svm.training - INFO - Classification Report:
+              precision    recall  f1-score   support
+
+         neg       0.88      0.84      0.85      4968
+         pos       0.84      0.88      0.86      5032
+
+    accuracy                           0.86     10000
+   macro avg       0.86      0.86      0.86     10000
+weighted avg       0.86      0.86      0.86     10000
+
+2025-07-15 21:06:49,778 - __main__ - INFO - Training SVM model with params: {'max_features': 300000, 'ngram_range': (1, 2), 'stop_words': 'english', 'lowercase': True, 'use_idf': True, 'smooth_idf': True, 'sublinear_tf': True}
+2025-07-15 21:06:49,778 - src.svm.training - INFO - Starting SVM model training...
+2025-07-15 21:06:49,778 - src.svm.training - INFO - Initialized LinearSVC model.
+2025-07-15 21:06:49,778 - src.svm.training - INFO - Using parameter grid for Grid Search: {'C': [0.5, 1, 2], 'tol': [1e-05, 0.0001, 0.001], 'max_iter': [1000, 2000, 3000, 4000], 'class_weight': [None, 'balanced']}
+2025-07-15 21:07:19,315 - src.svm.training - INFO - Best parameters found: {'C': 0.5, 'class_weight': 'balanced', 'max_iter': 1000, 'tol': 1e-05}
+2025-07-15 21:07:19,358 - src.svm.training - INFO - Classification Report:
+              precision    recall  f1-score   support
+
+         neg       0.91      0.88      0.90      4968
+         pos       0.89      0.92      0.90      5032
+
+    accuracy                           0.90     10000
+   macro avg       0.90      0.90      0.90     10000
+weighted avg       0.90      0.90      0.90     10000
+
+2025-07-15 21:07:19,358 - __main__ - INFO - Training SVM model with params: {'max_features': 300000, 'ngram_range': (1, 2), 'stop_words': 'english', 'lowercase': True, 'use_idf': True, 'smooth_idf': True, 'sublinear_tf': False}
+2025-07-15 21:07:19,358 - src.svm.training - INFO - Starting SVM model training...
+2025-07-15 21:07:19,358 - src.svm.training - INFO - Initialized LinearSVC model.
+2025-07-15 21:07:19,358 - src.svm.training - INFO - Using parameter grid for Grid Search: {'C': [0.5, 1, 2], 'tol': [1e-05, 0.0001, 0.001], 'max_iter': [1000, 2000, 3000, 4000], 'class_weight': [None, 'balanced']}
+2025-07-15 21:07:48,987 - src.svm.training - INFO - Best parameters found: {'C': 1, 'class_weight': None, 'max_iter': 1000, 'tol': 1e-05}
+2025-07-15 21:07:49,034 - src.svm.training - INFO - Classification Report:
+              precision    recall  f1-score   support
+
+         neg       0.91      0.88      0.90      4968
+         pos       0.89      0.92      0.90      5032
+
+    accuracy                           0.90     10000
+   macro avg       0.90      0.90      0.90     10000
+weighted avg       0.90      0.90      0.90     10000
+
+2025-07-15 21:07:49,034 - __main__ - INFO - Training SVM model with params: {'max_features': 300000, 'ngram_range': (1, 3), 'stop_words': 'english', 'lowercase': True, 'use_idf': True, 'smooth_idf': True, 'sublinear_tf': True}
+2025-07-15 21:07:49,034 - src.svm.training - INFO - Starting SVM model training...
+2025-07-15 21:07:49,034 - src.svm.training - INFO - Initialized LinearSVC model.
+2025-07-15 21:07:49,034 - src.svm.training - INFO - Using parameter grid for Grid Search: {'C': [0.5, 1, 2], 'tol': [1e-05, 0.0001, 0.001], 'max_iter': [1000, 2000, 3000, 4000], 'class_weight': [None, 'balanced']}
+2025-07-15 21:08:18,774 - src.svm.training - INFO - Best parameters found: {'C': 0.5, 'class_weight': 'balanced', 'max_iter': 1000, 'tol': 1e-05}
+2025-07-15 21:08:18,809 - src.svm.training - INFO - Classification Report:
+              precision    recall  f1-score   support
+
+         neg       0.91      0.89      0.90      4968
+         pos       0.89      0.91      0.90      5032
+
+    accuracy                           0.90     10000
+   macro avg       0.90      0.90      0.90     10000
+weighted avg       0.90      0.90      0.90     10000
+
+2025-07-15 21:08:18,809 - __main__ - INFO - Training SVM model with params: {'max_features': 300000, 'ngram_range': (1, 3), 'stop_words': 'english', 'lowercase': True, 'use_idf': True, 'smooth_idf': True, 'sublinear_tf': False}
+2025-07-15 21:08:18,809 - src.svm.training - INFO - Starting SVM model training...
+2025-07-15 21:08:18,809 - src.svm.training - INFO - Initialized LinearSVC model.
+2025-07-15 21:08:18,809 - src.svm.training - INFO - Using parameter grid for Grid Search: {'C': [0.5, 1, 2], 'tol': [1e-05, 0.0001, 0.001], 'max_iter': [1000, 2000, 3000, 4000], 'class_weight': [None, 'balanced']}
+2025-07-15 21:08:48,802 - src.svm.training - INFO - Best parameters found: {'C': 1, 'class_weight': None, 'max_iter': 1000, 'tol': 1e-05}
+2025-07-15 21:08:48,813 - src.svm.training - INFO - Classification Report:
+              precision    recall  f1-score   support
+
+         neg       0.91      0.88      0.90      4968
+         pos       0.89      0.92      0.90      5032
+
+    accuracy                           0.90     10000
+   macro avg       0.90      0.90      0.90     10000
+weighted avg       0.90      0.90      0.90     10000
+
+2025-07-15 21:08:48,813 - __main__ - INFO - Training SVM model with params: {'max_features': 300000, 'ngram_range': (2, 3), 'stop_words': 'english', 'lowercase': True, 'use_idf': True, 'smooth_idf': True, 'sublinear_tf': True}
+2025-07-15 21:08:48,813 - src.svm.training - INFO - Starting SVM model training...
+2025-07-15 21:08:48,813 - src.svm.training - INFO - Initialized LinearSVC model.
+2025-07-15 21:08:48,813 - src.svm.training - INFO - Using parameter grid for Grid Search: {'C': [0.5, 1, 2], 'tol': [1e-05, 0.0001, 0.001], 'max_iter': [1000, 2000, 3000, 4000], 'class_weight': [None, 'balanced']}
+2025-07-15 21:09:09,852 - src.svm.training - INFO - Best parameters found: {'C': 1, 'class_weight': 'balanced', 'max_iter': 1000, 'tol': 0.001}
+2025-07-15 21:09:09,859 - src.svm.training - INFO - Classification Report:
+              precision    recall  f1-score   support
+
+         neg       0.87      0.83      0.85      4968
+         pos       0.84      0.88      0.86      5032
+
+    accuracy                           0.86     10000
+   macro avg       0.86      0.86      0.86     10000
+weighted avg       0.86      0.86      0.86     10000
+
+2025-07-15 21:09:09,859 - __main__ - INFO - Training SVM model with params: {'max_features': 300000, 'ngram_range': (2, 3), 'stop_words': 'english', 'lowercase': True, 'use_idf': True, 'smooth_idf': True, 'sublinear_tf': False}
+2025-07-15 21:09:09,860 - src.svm.training - INFO - Starting SVM model training...
+2025-07-15 21:09:09,860 - src.svm.training - INFO - Initialized LinearSVC model.
+2025-07-15 21:09:09,860 - src.svm.training - INFO - Using parameter grid for Grid Search: {'C': [0.5, 1, 2], 'tol': [1e-05, 0.0001, 0.001], 'max_iter': [1000, 2000, 3000, 4000], 'class_weight': [None, 'balanced']}
+2025-07-15 21:09:30,912 - src.svm.training - INFO - Best parameters found: {'C': 1, 'class_weight': None, 'max_iter': 1000, 'tol': 1e-05}
+2025-07-15 21:09:30,920 - src.svm.training - INFO - Classification Report:
+              precision    recall  f1-score   support
+
+         neg       0.87      0.83      0.85      4968
+         pos       0.84      0.88      0.86      5032
+
+    accuracy                           0.86     10000
+   macro avg       0.86      0.86      0.86     10000
+weighted avg       0.86      0.86      0.86     10000
+
+2025-07-15 21:09:30,920 - src.data.data_loader - INFO - Saving SVM model to /Users/lau/Documents/Uni/4. Semester/Project NLP/Project/models/best_svm__max_features=400000-ngram_range=1_3-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=True.joblib
+2025-07-15 21:09:30,923 - src.data.data_loader - INFO - SVM model saved to /Users/lau/Documents/Uni/4. Semester/Project NLP/Project/models/best_svm__max_features=400000-ngram_range=1_3-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=True.joblib
+2025-07-15 21:09:30,923 - __main__ - INFO - Best SVM model saved with parameters=
+{'max_features': 400000, 'ngram_range': (1, 3), 'stop_words': 'english', 'lowercase': True, 'use_idf': True, 'smooth_idf': True, 'sublinear_tf': True}
+and score=0.8931
