@@ -10,6 +10,7 @@ from sklearn.datasets import load_files
 from sklearn.utils import Bunch
 from sklearn.model_selection import GridSearchCV
 from joblib import dump, load
+from sklearn.feature_extraction.text import TfidfVectorizer
 
 # ─── Project Imports ──────────────────────────────────────────────────────────────
 from src.data.data_classes import TfidfDataset
@@ -18,7 +19,6 @@ from src.config.paths import CLEANED_DATA_TXT_DIR, ENCODED_DATA_DIR
 # ─── Set up logging ───────────────────────────────────────────────────────────────
 
 logger = logging_config.configure_logging()
-
 
 
 def load_texts_from_folder(path, test_mode: bool = False, sample_count: int=20) -> Bunch:
@@ -97,8 +97,9 @@ def save_encoded_dataset_as_sparse_matrix(dataset: TfidfDataset, path: str = ENC
     logger.info(f"Saving encoded dataset to %s", path)
 
     # Create the save directory if it doesn't exist
-    SAVE_DIR = path
-    SAVE_DIR.mkdir(parents=True, exist_ok=True)
+    if isinstance(path, str):
+        path = Path(path)
+    path.parent.mkdir(parents=True, exist_ok=True)
 
 
     # Save the sparse matrix and target labels
@@ -108,8 +109,8 @@ def save_encoded_dataset_as_sparse_matrix(dataset: TfidfDataset, path: str = ENC
         "X_test": dataset.X_test,
         "y_test": dataset.y_test,
         "vectorizer": dataset.vectorizer
-    }, SAVE_DIR / "complete_dataset.joblib")
-    logger.info("Saved encoded dataset to %s", SAVE_DIR)
+    }, path)
+    logger.info("Saved encoded dataset to %s", path)
 
 def load_encoded_dataset_joblib(path: str = ENCODED_DATA_DIR / "complete_dataset.joblib"):
     """
@@ -188,3 +189,43 @@ def sanitize(val: str) -> str:
 
 def param_dict_to_filename(params: dict) -> str:
     return "-".join(f"{k}={sanitize(v)}" for k, v in params.items())
+
+def save_encoder(path: str, vectorizer):
+    """
+    Save the TF-IDF vectorizer to a joblib file.
+    Args:
+        path (str): The path where the vectorizer will be saved.
+        vectorizer: The TF-IDF vectorizer to save.
+    Returns:
+        None
+    """
+    # Ensure the path is a Path object
+    if isinstance(path, str):
+        path = Path(path)
+
+    # Create the parent directory if it doesn't exist
+    path.parent.mkdir(parents=True, exist_ok=True)
+    
+    # Start logging
+    logger.info(f"Saving encoder to {path}")
+
+    # Save the vectorizer using joblib
+    dump(vectorizer, path)
+    logger.info(f"Encoder saved to {path}")
+
+def load_encoder(path: str) -> TfidfVectorizer:
+    """
+    Load the TF-IDF vectorizer from a joblib file.
+    Args:
+        path (str): The path to the joblib file containing the vectorizer.
+    Returns:
+        TfidfVectorizer: The loaded TF-IDF vectorizer.
+    """
+    # Start logging
+    logger.info(f"Loading encoder from {path}")
+
+    # Load the vectorizer using joblib
+    vectorizer = load(path)
+    logger.info("Encoder loaded successfully")
+
+    return vectorizer

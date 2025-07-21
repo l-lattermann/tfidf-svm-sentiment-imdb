@@ -14,6 +14,7 @@ import numpy as np
 from sklearn.datasets import make_classification
 from sklearn.svm import LinearSVC
 from sklearn.model_selection import GridSearchCV
+from numpy.testing import assert_array_almost_equal
 
 # ─── Path Setup ──────────────────────────────────────────────────────────────────
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
@@ -111,10 +112,11 @@ def test_save_and_load_sparse_matrix(tmp_path):
     )
 
     # Act
-    data_loader.save_encoded_dataset_as_sparse_matrix(dataset, tmp_path)
+    path = tmp_path / "complete_dataset.joblib"
+    data_loader.save_encoded_dataset_as_sparse_matrix(dataset, path)
 
     # Load the dataset back
-    loaded_data = data_loader.load_encoded_dataset_joblib(tmp_path / "complete_dataset.joblib")
+    loaded_data = data_loader.load_encoded_dataset_joblib(path)
 
     # Assert
     assert isinstance(loaded_data, TfidfDataset)
@@ -154,3 +156,36 @@ def test_save_load_svm_model(tmp_path):
     assert loaded_model.best_params_ == grid.best_params_
     assert loaded_model.best_score_ == grid.best_score_
     assert loaded_model.param_grid == grid.param_grid
+
+def test_save_load_encoder(tmp_path):
+    """
+    Test saving a TF-IDF vectorizer to a file.
+    This test creates a sample TfidfDataset, saves the vectorizer,
+    and checks if the saved file exists and can be loaded back.
+    """
+    # Arrange
+    vectorizer = TfidfVectorizer()
+    
+    # Fit the vectorizer on some sample data
+    vectorizer.fit(["sample text", "another sample text"])
+
+    # Create a sample TfidfDataset
+    dataset = TfidfDataset(
+        name="test_dataset",
+        X_train=csr_matrix([[1, 0], [0, 1]]),
+        y_train=np.array([0, 1]),
+        X_test=csr_matrix([[0, 1], [1, 0]]),
+        y_test=np.array([1, 0]),
+        vectorizer=vectorizer
+    )
+
+    # Act
+    path_joblib = tmp_path / "vectorizer.joblib"
+    data_loader.save_encoder(path_joblib, vectorizer)
+
+    # Load the vectorizer back
+    loaded_vectorizer = data_loader.load_encoder(path_joblib)
+
+    # Assert
+    assert loaded_vectorizer.vocabulary_ == vectorizer.vocabulary_
+    assert_array_almost_equal(loaded_vectorizer.idf_, vectorizer.idf_)

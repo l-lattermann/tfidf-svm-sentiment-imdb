@@ -1,0 +1,376 @@
+2025-07-21 21:38:36,179 - INFO - Using existing spaCy model 'en_core_web_sm'.
+2025-07-21 21:38:36,733 - INFO - Running in TEST mode (20 samples).
+2025-07-21 21:38:36,733 - INFO - Test flag is set. Skipping full dataset download. Running only 20 samples.
+2025-07-21 21:38:36,733 - INFO - Starting IMDb dataset download and preparation...
+2025-07-21 21:38:36,733 - INFO - Output directory structure created at project_root/data/aclImdb
+2025-07-21 21:38:51,825 - INFO - IMDb dataset loaded successfully.
+2025-07-21 21:38:51,835 - INFO - Split ratio set to 80/20 for training and testing.
+2025-07-21 21:38:51,835 - INFO - Number of training samples: 40000
+2025-07-21 21:38:51,835 - INFO - Number of testing samples: 10000
+2025-07-21 21:39:13,946 - INFO - Saved train and test splits to project_root/data/aclImdb
+2025-07-21 21:39:31,616 - INFO - Zipped the dataset to project_root/data/aclImdb/aclImdb.zip
+2025-07-21 21:39:31,619 - INFO - Loading datasets from project_root/data/aclImdb/train and project_root/data/aclImdb/test
+2025-07-21 21:39:31,619 - INFO - Loading text files from project_root/data/aclImdb/train with test_mode=True and sample_count=20
+2025-07-21 21:39:37,257 - INFO - Loaded 20 samples from project_root/data/aclImdb/train
+2025-07-21 21:39:37,257 - INFO - Loading text files from project_root/data/aclImdb/test with test_mode=True and sample_count=20
+2025-07-21 21:39:38,689 - INFO - Loaded 20 samples from project_root/data/aclImdb/test
+2025-07-21 21:39:41,856 - INFO - Saving dataset to project_root/data/cleaned_txt for split 'train'
+2025-07-21 21:39:41,857 - INFO - Created directory: project_root/data/cleaned_txt/train/neg
+2025-07-21 21:39:41,857 - INFO - Created directory: project_root/data/cleaned_txt/train/pos
+2025-07-21 21:39:41,860 - INFO - Saved 20 files to project_root/data/cleaned_txt/train
+2025-07-21 21:39:41,860 - INFO - Saving dataset to project_root/data/cleaned_txt for split 'test'
+2025-07-21 21:39:41,860 - INFO - Created directory: project_root/data/cleaned_txt/test/neg
+2025-07-21 21:39:41,860 - INFO - Created directory: project_root/data/cleaned_txt/test/pos
+2025-07-21 21:39:41,863 - INFO - Saved 20 files to project_root/data/cleaned_txt/test
+2025-07-21 21:39:41,866 - INFO - Using TF-IDF parameters: {'max_features': [50000, 400000, 300000], 'ngram_range': [(1, 2), (1, 3), (2, 3)], 'stop_words': ['english'], 'lowercase': [True], 'use_idf': [True], 'smooth_idf': [True], 'sublinear_tf': [True, False]}
+2025-07-21 21:39:41,866 - INFO - Fine-tuning encoder. Generating multiple encoded datasets with different parameters.
+2025-07-21 21:39:41,866 - INFO - Generated 18 combinations of parameters for fine-tuning.
+2025-07-21 21:39:41,866 - INFO - Encoding dataset with parameters: {'max_features': 50000, 'ngram_range': (1, 2), 'stop_words': 'english', 'lowercase': True, 'use_idf': True, 'smooth_idf': True, 'sublinear_tf': True}
+2025-07-21 21:39:41,881 - INFO - Saving encoded dataset to project_root/data/IMBD_tfidf/encoded__max_features=50000-ngram_range=1_2-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=True.joblib
+2025-07-21 21:39:41,936 - INFO - Saved encoded dataset to project_root/data/IMBD_tfidf/encoded__max_features=50000-ngram_range=1_2-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=True.joblib
+2025-07-21 21:39:41,936 - INFO - Encoded dataset saved to project_root/data/IMBD_tfidf/encoded__max_features=50000-ngram_range=1_2-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=True.joblib
+2025-07-21 21:39:41,937 - INFO - Encoding dataset with parameters: {'max_features': 50000, 'ngram_range': (1, 2), 'stop_words': 'english', 'lowercase': True, 'use_idf': True, 'smooth_idf': True, 'sublinear_tf': False}
+2025-07-21 21:39:41,950 - INFO - Saving encoded dataset to project_root/data/IMBD_tfidf/encoded__max_features=50000-ngram_range=1_2-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=False.joblib
+2025-07-21 21:39:42,004 - INFO - Saved encoded dataset to project_root/data/IMBD_tfidf/encoded__max_features=50000-ngram_range=1_2-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=False.joblib
+2025-07-21 21:39:42,005 - INFO - Encoded dataset saved to project_root/data/IMBD_tfidf/encoded__max_features=50000-ngram_range=1_2-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=False.joblib
+2025-07-21 21:39:42,005 - INFO - Encoding dataset with parameters: {'max_features': 50000, 'ngram_range': (1, 3), 'stop_words': 'english', 'lowercase': True, 'use_idf': True, 'smooth_idf': True, 'sublinear_tf': True}
+2025-07-21 21:39:42,022 - INFO - Saving encoded dataset to project_root/data/IMBD_tfidf/encoded__max_features=50000-ngram_range=1_3-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=True.joblib
+2025-07-21 21:39:42,112 - INFO - Saved encoded dataset to project_root/data/IMBD_tfidf/encoded__max_features=50000-ngram_range=1_3-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=True.joblib
+2025-07-21 21:39:42,112 - INFO - Encoded dataset saved to project_root/data/IMBD_tfidf/encoded__max_features=50000-ngram_range=1_3-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=True.joblib
+2025-07-21 21:39:42,113 - INFO - Encoding dataset with parameters: {'max_features': 50000, 'ngram_range': (1, 3), 'stop_words': 'english', 'lowercase': True, 'use_idf': True, 'smooth_idf': True, 'sublinear_tf': False}
+2025-07-21 21:39:42,129 - INFO - Saving encoded dataset to project_root/data/IMBD_tfidf/encoded__max_features=50000-ngram_range=1_3-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=False.joblib
+2025-07-21 21:39:42,216 - INFO - Saved encoded dataset to project_root/data/IMBD_tfidf/encoded__max_features=50000-ngram_range=1_3-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=False.joblib
+2025-07-21 21:39:42,217 - INFO - Encoded dataset saved to project_root/data/IMBD_tfidf/encoded__max_features=50000-ngram_range=1_3-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=False.joblib
+2025-07-21 21:39:42,217 - INFO - Encoding dataset with parameters: {'max_features': 50000, 'ngram_range': (2, 3), 'stop_words': 'english', 'lowercase': True, 'use_idf': True, 'smooth_idf': True, 'sublinear_tf': True}
+2025-07-21 21:39:42,231 - INFO - Saving encoded dataset to project_root/data/IMBD_tfidf/encoded__max_features=50000-ngram_range=2_3-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=True.joblib
+2025-07-21 21:39:42,299 - INFO - Saved encoded dataset to project_root/data/IMBD_tfidf/encoded__max_features=50000-ngram_range=2_3-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=True.joblib
+2025-07-21 21:39:42,299 - INFO - Encoded dataset saved to project_root/data/IMBD_tfidf/encoded__max_features=50000-ngram_range=2_3-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=True.joblib
+2025-07-21 21:39:42,299 - INFO - Encoding dataset with parameters: {'max_features': 50000, 'ngram_range': (2, 3), 'stop_words': 'english', 'lowercase': True, 'use_idf': True, 'smooth_idf': True, 'sublinear_tf': False}
+2025-07-21 21:39:42,313 - INFO - Saving encoded dataset to project_root/data/IMBD_tfidf/encoded__max_features=50000-ngram_range=2_3-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=False.joblib
+2025-07-21 21:39:42,380 - INFO - Saved encoded dataset to project_root/data/IMBD_tfidf/encoded__max_features=50000-ngram_range=2_3-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=False.joblib
+2025-07-21 21:39:42,381 - INFO - Encoded dataset saved to project_root/data/IMBD_tfidf/encoded__max_features=50000-ngram_range=2_3-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=False.joblib
+2025-07-21 21:39:42,381 - INFO - Encoding dataset with parameters: {'max_features': 400000, 'ngram_range': (1, 2), 'stop_words': 'english', 'lowercase': True, 'use_idf': True, 'smooth_idf': True, 'sublinear_tf': True}
+2025-07-21 21:39:42,394 - INFO - Saving encoded dataset to project_root/data/IMBD_tfidf/encoded__max_features=400000-ngram_range=1_2-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=True.joblib
+2025-07-21 21:39:42,448 - INFO - Saved encoded dataset to project_root/data/IMBD_tfidf/encoded__max_features=400000-ngram_range=1_2-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=True.joblib
+2025-07-21 21:39:42,448 - INFO - Encoded dataset saved to project_root/data/IMBD_tfidf/encoded__max_features=400000-ngram_range=1_2-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=True.joblib
+2025-07-21 21:39:42,449 - INFO - Encoding dataset with parameters: {'max_features': 400000, 'ngram_range': (1, 2), 'stop_words': 'english', 'lowercase': True, 'use_idf': True, 'smooth_idf': True, 'sublinear_tf': False}
+2025-07-21 21:39:42,461 - INFO - Saving encoded dataset to project_root/data/IMBD_tfidf/encoded__max_features=400000-ngram_range=1_2-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=False.joblib
+2025-07-21 21:39:42,514 - INFO - Saved encoded dataset to project_root/data/IMBD_tfidf/encoded__max_features=400000-ngram_range=1_2-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=False.joblib
+2025-07-21 21:39:42,514 - INFO - Encoded dataset saved to project_root/data/IMBD_tfidf/encoded__max_features=400000-ngram_range=1_2-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=False.joblib
+2025-07-21 21:39:42,515 - INFO - Encoding dataset with parameters: {'max_features': 400000, 'ngram_range': (1, 3), 'stop_words': 'english', 'lowercase': True, 'use_idf': True, 'smooth_idf': True, 'sublinear_tf': True}
+2025-07-21 21:39:42,531 - INFO - Saving encoded dataset to project_root/data/IMBD_tfidf/encoded__max_features=400000-ngram_range=1_3-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=True.joblib
+2025-07-21 21:39:42,618 - INFO - Saved encoded dataset to project_root/data/IMBD_tfidf/encoded__max_features=400000-ngram_range=1_3-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=True.joblib
+2025-07-21 21:39:42,619 - INFO - Encoded dataset saved to project_root/data/IMBD_tfidf/encoded__max_features=400000-ngram_range=1_3-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=True.joblib
+2025-07-21 21:39:42,619 - INFO - Encoding dataset with parameters: {'max_features': 400000, 'ngram_range': (1, 3), 'stop_words': 'english', 'lowercase': True, 'use_idf': True, 'smooth_idf': True, 'sublinear_tf': False}
+2025-07-21 21:39:42,635 - INFO - Saving encoded dataset to project_root/data/IMBD_tfidf/encoded__max_features=400000-ngram_range=1_3-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=False.joblib
+2025-07-21 21:39:42,723 - INFO - Saved encoded dataset to project_root/data/IMBD_tfidf/encoded__max_features=400000-ngram_range=1_3-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=False.joblib
+2025-07-21 21:39:42,724 - INFO - Encoded dataset saved to project_root/data/IMBD_tfidf/encoded__max_features=400000-ngram_range=1_3-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=False.joblib
+2025-07-21 21:39:42,724 - INFO - Encoding dataset with parameters: {'max_features': 400000, 'ngram_range': (2, 3), 'stop_words': 'english', 'lowercase': True, 'use_idf': True, 'smooth_idf': True, 'sublinear_tf': True}
+2025-07-21 21:39:42,739 - INFO - Saving encoded dataset to project_root/data/IMBD_tfidf/encoded__max_features=400000-ngram_range=2_3-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=True.joblib
+2025-07-21 21:39:42,806 - INFO - Saved encoded dataset to project_root/data/IMBD_tfidf/encoded__max_features=400000-ngram_range=2_3-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=True.joblib
+2025-07-21 21:39:42,806 - INFO - Encoded dataset saved to project_root/data/IMBD_tfidf/encoded__max_features=400000-ngram_range=2_3-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=True.joblib
+2025-07-21 21:39:42,806 - INFO - Encoding dataset with parameters: {'max_features': 400000, 'ngram_range': (2, 3), 'stop_words': 'english', 'lowercase': True, 'use_idf': True, 'smooth_idf': True, 'sublinear_tf': False}
+2025-07-21 21:39:42,820 - INFO - Saving encoded dataset to project_root/data/IMBD_tfidf/encoded__max_features=400000-ngram_range=2_3-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=False.joblib
+2025-07-21 21:39:42,889 - INFO - Saved encoded dataset to project_root/data/IMBD_tfidf/encoded__max_features=400000-ngram_range=2_3-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=False.joblib
+2025-07-21 21:39:42,889 - INFO - Encoded dataset saved to project_root/data/IMBD_tfidf/encoded__max_features=400000-ngram_range=2_3-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=False.joblib
+2025-07-21 21:39:42,890 - INFO - Encoding dataset with parameters: {'max_features': 300000, 'ngram_range': (1, 2), 'stop_words': 'english', 'lowercase': True, 'use_idf': True, 'smooth_idf': True, 'sublinear_tf': True}
+2025-07-21 21:39:42,904 - INFO - Saving encoded dataset to project_root/data/IMBD_tfidf/encoded__max_features=300000-ngram_range=1_2-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=True.joblib
+2025-07-21 21:39:42,966 - INFO - Saved encoded dataset to project_root/data/IMBD_tfidf/encoded__max_features=300000-ngram_range=1_2-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=True.joblib
+2025-07-21 21:39:42,967 - INFO - Encoded dataset saved to project_root/data/IMBD_tfidf/encoded__max_features=300000-ngram_range=1_2-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=True.joblib
+2025-07-21 21:39:42,967 - INFO - Encoding dataset with parameters: {'max_features': 300000, 'ngram_range': (1, 2), 'stop_words': 'english', 'lowercase': True, 'use_idf': True, 'smooth_idf': True, 'sublinear_tf': False}
+2025-07-21 21:39:42,981 - INFO - Saving encoded dataset to project_root/data/IMBD_tfidf/encoded__max_features=300000-ngram_range=1_2-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=False.joblib
+2025-07-21 21:39:43,045 - INFO - Saved encoded dataset to project_root/data/IMBD_tfidf/encoded__max_features=300000-ngram_range=1_2-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=False.joblib
+2025-07-21 21:39:43,045 - INFO - Encoded dataset saved to project_root/data/IMBD_tfidf/encoded__max_features=300000-ngram_range=1_2-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=False.joblib
+2025-07-21 21:39:43,045 - INFO - Encoding dataset with parameters: {'max_features': 300000, 'ngram_range': (1, 3), 'stop_words': 'english', 'lowercase': True, 'use_idf': True, 'smooth_idf': True, 'sublinear_tf': True}
+2025-07-21 21:39:43,065 - INFO - Saving encoded dataset to project_root/data/IMBD_tfidf/encoded__max_features=300000-ngram_range=1_3-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=True.joblib
+2025-07-21 21:39:43,169 - INFO - Saved encoded dataset to project_root/data/IMBD_tfidf/encoded__max_features=300000-ngram_range=1_3-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=True.joblib
+2025-07-21 21:39:43,170 - INFO - Encoded dataset saved to project_root/data/IMBD_tfidf/encoded__max_features=300000-ngram_range=1_3-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=True.joblib
+2025-07-21 21:39:43,170 - INFO - Encoding dataset with parameters: {'max_features': 300000, 'ngram_range': (1, 3), 'stop_words': 'english', 'lowercase': True, 'use_idf': True, 'smooth_idf': True, 'sublinear_tf': False}
+2025-07-21 21:39:43,191 - INFO - Saving encoded dataset to project_root/data/IMBD_tfidf/encoded__max_features=300000-ngram_range=1_3-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=False.joblib
+2025-07-21 21:39:43,293 - INFO - Saved encoded dataset to project_root/data/IMBD_tfidf/encoded__max_features=300000-ngram_range=1_3-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=False.joblib
+2025-07-21 21:39:43,294 - INFO - Encoded dataset saved to project_root/data/IMBD_tfidf/encoded__max_features=300000-ngram_range=1_3-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=False.joblib
+2025-07-21 21:39:43,294 - INFO - Encoding dataset with parameters: {'max_features': 300000, 'ngram_range': (2, 3), 'stop_words': 'english', 'lowercase': True, 'use_idf': True, 'smooth_idf': True, 'sublinear_tf': True}
+2025-07-21 21:39:43,310 - INFO - Saving encoded dataset to project_root/data/IMBD_tfidf/encoded__max_features=300000-ngram_range=2_3-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=True.joblib
+2025-07-21 21:39:43,389 - INFO - Saved encoded dataset to project_root/data/IMBD_tfidf/encoded__max_features=300000-ngram_range=2_3-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=True.joblib
+2025-07-21 21:39:43,389 - INFO - Encoded dataset saved to project_root/data/IMBD_tfidf/encoded__max_features=300000-ngram_range=2_3-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=True.joblib
+2025-07-21 21:39:43,390 - INFO - Encoding dataset with parameters: {'max_features': 300000, 'ngram_range': (2, 3), 'stop_words': 'english', 'lowercase': True, 'use_idf': True, 'smooth_idf': True, 'sublinear_tf': False}
+2025-07-21 21:39:43,406 - INFO - Saving encoded dataset to project_root/data/IMBD_tfidf/encoded__max_features=300000-ngram_range=2_3-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=False.joblib
+2025-07-21 21:39:43,486 - INFO - Saved encoded dataset to project_root/data/IMBD_tfidf/encoded__max_features=300000-ngram_range=2_3-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=False.joblib
+2025-07-21 21:39:43,486 - INFO - Encoded dataset saved to project_root/data/IMBD_tfidf/encoded__max_features=300000-ngram_range=2_3-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=False.joblib
+2025-07-21 21:39:43,487 - INFO - Fine-tuning encoder. Saving only the best model.
+2025-07-21 21:39:43,487 - INFO - Training SVM model with params: {'max_features': 50000, 'ngram_range': (1, 2), 'stop_words': 'english', 'lowercase': True, 'use_idf': True, 'smooth_idf': True, 'sublinear_tf': True}
+2025-07-21 21:39:43,487 - INFO - Starting SVM model training...
+2025-07-21 21:39:43,487 - INFO - Initialized LinearSVC model.
+2025-07-21 21:39:43,487 - INFO - Using parameter grid for Grid Search: {'C': [0.5, 1, 2], 'tol': [1e-05, 0.0001, 0.001], 'max_iter': [1000, 2000, 3000, 4000], 'class_weight': [None, 'balanced']}
+2025-07-21 21:39:52,591 - INFO - Best parameters found: {'C': 0.5, 'class_weight': None, 'max_iter': 1000, 'tol': 1e-05}
+2025-07-21 21:39:52,608 - INFO - Classification Report:
+              precision    recall  f1-score   support
+
+         neg       0.67      1.00      0.80        12
+         pos       1.00      0.25      0.40         8
+
+    accuracy                           0.70        20
+   macro avg       0.83      0.62      0.60        20
+weighted avg       0.80      0.70      0.64        20
+
+2025-07-21 21:39:52,610 - INFO - Training SVM model with params: {'max_features': 50000, 'ngram_range': (1, 2), 'stop_words': 'english', 'lowercase': True, 'use_idf': True, 'smooth_idf': True, 'sublinear_tf': False}
+2025-07-21 21:39:52,611 - INFO - Starting SVM model training...
+2025-07-21 21:39:52,611 - INFO - Initialized LinearSVC model.
+2025-07-21 21:39:52,611 - INFO - Using parameter grid for Grid Search: {'C': [0.5, 1, 2], 'tol': [1e-05, 0.0001, 0.001], 'max_iter': [1000, 2000, 3000, 4000], 'class_weight': [None, 'balanced']}
+2025-07-21 21:39:53,012 - INFO - Best parameters found: {'C': 0.5, 'class_weight': 'balanced', 'max_iter': 1000, 'tol': 1e-05}
+2025-07-21 21:39:53,021 - INFO - Classification Report:
+              precision    recall  f1-score   support
+
+         neg       0.71      0.83      0.77        12
+         pos       0.67      0.50      0.57         8
+
+    accuracy                           0.70        20
+   macro avg       0.69      0.67      0.67        20
+weighted avg       0.70      0.70      0.69        20
+
+2025-07-21 21:39:53,023 - INFO - Training SVM model with params: {'max_features': 50000, 'ngram_range': (1, 3), 'stop_words': 'english', 'lowercase': True, 'use_idf': True, 'smooth_idf': True, 'sublinear_tf': True}
+2025-07-21 21:39:53,024 - INFO - Starting SVM model training...
+2025-07-21 21:39:53,024 - INFO - Initialized LinearSVC model.
+2025-07-21 21:39:53,030 - INFO - Using parameter grid for Grid Search: {'C': [0.5, 1, 2], 'tol': [1e-05, 0.0001, 0.001], 'max_iter': [1000, 2000, 3000, 4000], 'class_weight': [None, 'balanced']}
+2025-07-21 21:39:53,537 - INFO - Best parameters found: {'C': 0.5, 'class_weight': None, 'max_iter': 1000, 'tol': 1e-05}
+2025-07-21 21:39:53,546 - INFO - Classification Report:
+              precision    recall  f1-score   support
+
+         neg       0.63      1.00      0.77        12
+         pos       1.00      0.12      0.22         8
+
+    accuracy                           0.65        20
+   macro avg       0.82      0.56      0.50        20
+weighted avg       0.78      0.65      0.55        20
+
+2025-07-21 21:39:53,546 - INFO - Training SVM model with params: {'max_features': 50000, 'ngram_range': (1, 3), 'stop_words': 'english', 'lowercase': True, 'use_idf': True, 'smooth_idf': True, 'sublinear_tf': False}
+2025-07-21 21:39:53,546 - INFO - Starting SVM model training...
+2025-07-21 21:39:53,547 - INFO - Initialized LinearSVC model.
+2025-07-21 21:39:53,547 - INFO - Using parameter grid for Grid Search: {'C': [0.5, 1, 2], 'tol': [1e-05, 0.0001, 0.001], 'max_iter': [1000, 2000, 3000, 4000], 'class_weight': [None, 'balanced']}
+2025-07-21 21:39:53,986 - INFO - Best parameters found: {'C': 0.5, 'class_weight': None, 'max_iter': 1000, 'tol': 1e-05}
+2025-07-21 21:39:53,995 - INFO - Classification Report:
+              precision    recall  f1-score   support
+
+         neg       0.63      1.00      0.77        12
+         pos       1.00      0.12      0.22         8
+
+    accuracy                           0.65        20
+   macro avg       0.82      0.56      0.50        20
+weighted avg       0.78      0.65      0.55        20
+
+2025-07-21 21:39:53,996 - INFO - Training SVM model with params: {'max_features': 50000, 'ngram_range': (2, 3), 'stop_words': 'english', 'lowercase': True, 'use_idf': True, 'smooth_idf': True, 'sublinear_tf': True}
+2025-07-21 21:39:53,996 - INFO - Starting SVM model training...
+2025-07-21 21:39:53,996 - INFO - Initialized LinearSVC model.
+2025-07-21 21:39:53,996 - INFO - Using parameter grid for Grid Search: {'C': [0.5, 1, 2], 'tol': [1e-05, 0.0001, 0.001], 'max_iter': [1000, 2000, 3000, 4000], 'class_weight': [None, 'balanced']}
+2025-07-21 21:39:54,362 - INFO - Best parameters found: {'C': 0.5, 'class_weight': None, 'max_iter': 1000, 'tol': 1e-05}
+2025-07-21 21:39:54,372 - INFO - Classification Report:
+              precision    recall  f1-score   support
+
+         neg       0.65      0.92      0.76        12
+         pos       0.67      0.25      0.36         8
+
+    accuracy                           0.65        20
+   macro avg       0.66      0.58      0.56        20
+weighted avg       0.65      0.65      0.60        20
+
+2025-07-21 21:39:54,373 - INFO - Training SVM model with params: {'max_features': 50000, 'ngram_range': (2, 3), 'stop_words': 'english', 'lowercase': True, 'use_idf': True, 'smooth_idf': True, 'sublinear_tf': False}
+2025-07-21 21:39:54,374 - INFO - Starting SVM model training...
+2025-07-21 21:39:54,375 - INFO - Initialized LinearSVC model.
+2025-07-21 21:39:54,375 - INFO - Using parameter grid for Grid Search: {'C': [0.5, 1, 2], 'tol': [1e-05, 0.0001, 0.001], 'max_iter': [1000, 2000, 3000, 4000], 'class_weight': [None, 'balanced']}
+2025-07-21 21:39:54,837 - INFO - Best parameters found: {'C': 0.5, 'class_weight': None, 'max_iter': 1000, 'tol': 1e-05}
+2025-07-21 21:39:54,845 - INFO - Classification Report:
+              precision    recall  f1-score   support
+
+         neg       0.65      0.92      0.76        12
+         pos       0.67      0.25      0.36         8
+
+    accuracy                           0.65        20
+   macro avg       0.66      0.58      0.56        20
+weighted avg       0.65      0.65      0.60        20
+
+2025-07-21 21:39:54,845 - INFO - Training SVM model with params: {'max_features': 400000, 'ngram_range': (1, 2), 'stop_words': 'english', 'lowercase': True, 'use_idf': True, 'smooth_idf': True, 'sublinear_tf': True}
+2025-07-21 21:39:54,846 - INFO - Starting SVM model training...
+2025-07-21 21:39:54,846 - INFO - Initialized LinearSVC model.
+2025-07-21 21:39:54,846 - INFO - Using parameter grid for Grid Search: {'C': [0.5, 1, 2], 'tol': [1e-05, 0.0001, 0.001], 'max_iter': [1000, 2000, 3000, 4000], 'class_weight': [None, 'balanced']}
+2025-07-21 21:39:55,188 - INFO - Best parameters found: {'C': 0.5, 'class_weight': None, 'max_iter': 1000, 'tol': 1e-05}
+2025-07-21 21:39:55,202 - INFO - Classification Report:
+              precision    recall  f1-score   support
+
+         neg       0.67      1.00      0.80        12
+         pos       1.00      0.25      0.40         8
+
+    accuracy                           0.70        20
+   macro avg       0.83      0.62      0.60        20
+weighted avg       0.80      0.70      0.64        20
+
+2025-07-21 21:39:55,202 - INFO - Training SVM model with params: {'max_features': 400000, 'ngram_range': (1, 2), 'stop_words': 'english', 'lowercase': True, 'use_idf': True, 'smooth_idf': True, 'sublinear_tf': False}
+2025-07-21 21:39:55,203 - INFO - Starting SVM model training...
+2025-07-21 21:39:55,203 - INFO - Initialized LinearSVC model.
+2025-07-21 21:39:55,204 - INFO - Using parameter grid for Grid Search: {'C': [0.5, 1, 2], 'tol': [1e-05, 0.0001, 0.001], 'max_iter': [1000, 2000, 3000, 4000], 'class_weight': [None, 'balanced']}
+2025-07-21 21:39:55,478 - INFO - Best parameters found: {'C': 0.5, 'class_weight': 'balanced', 'max_iter': 1000, 'tol': 1e-05}
+2025-07-21 21:39:55,486 - INFO - Classification Report:
+              precision    recall  f1-score   support
+
+         neg       0.71      0.83      0.77        12
+         pos       0.67      0.50      0.57         8
+
+    accuracy                           0.70        20
+   macro avg       0.69      0.67      0.67        20
+weighted avg       0.70      0.70      0.69        20
+
+2025-07-21 21:39:55,487 - INFO - Training SVM model with params: {'max_features': 400000, 'ngram_range': (1, 3), 'stop_words': 'english', 'lowercase': True, 'use_idf': True, 'smooth_idf': True, 'sublinear_tf': True}
+2025-07-21 21:39:55,488 - INFO - Starting SVM model training...
+2025-07-21 21:39:55,488 - INFO - Initialized LinearSVC model.
+2025-07-21 21:39:55,489 - INFO - Using parameter grid for Grid Search: {'C': [0.5, 1, 2], 'tol': [1e-05, 0.0001, 0.001], 'max_iter': [1000, 2000, 3000, 4000], 'class_weight': [None, 'balanced']}
+2025-07-21 21:39:56,018 - INFO - Best parameters found: {'C': 0.5, 'class_weight': None, 'max_iter': 1000, 'tol': 1e-05}
+2025-07-21 21:39:56,026 - INFO - Classification Report:
+              precision    recall  f1-score   support
+
+         neg       0.63      1.00      0.77        12
+         pos       1.00      0.12      0.22         8
+
+    accuracy                           0.65        20
+   macro avg       0.82      0.56      0.50        20
+weighted avg       0.78      0.65      0.55        20
+
+2025-07-21 21:39:56,027 - INFO - Training SVM model with params: {'max_features': 400000, 'ngram_range': (1, 3), 'stop_words': 'english', 'lowercase': True, 'use_idf': True, 'smooth_idf': True, 'sublinear_tf': False}
+2025-07-21 21:39:56,028 - INFO - Starting SVM model training...
+2025-07-21 21:39:56,028 - INFO - Initialized LinearSVC model.
+2025-07-21 21:39:56,028 - INFO - Using parameter grid for Grid Search: {'C': [0.5, 1, 2], 'tol': [1e-05, 0.0001, 0.001], 'max_iter': [1000, 2000, 3000, 4000], 'class_weight': [None, 'balanced']}
+2025-07-21 21:39:56,438 - INFO - Best parameters found: {'C': 0.5, 'class_weight': None, 'max_iter': 1000, 'tol': 1e-05}
+2025-07-21 21:39:56,446 - INFO - Classification Report:
+              precision    recall  f1-score   support
+
+         neg       0.63      1.00      0.77        12
+         pos       1.00      0.12      0.22         8
+
+    accuracy                           0.65        20
+   macro avg       0.82      0.56      0.50        20
+weighted avg       0.78      0.65      0.55        20
+
+2025-07-21 21:39:56,447 - INFO - Training SVM model with params: {'max_features': 400000, 'ngram_range': (2, 3), 'stop_words': 'english', 'lowercase': True, 'use_idf': True, 'smooth_idf': True, 'sublinear_tf': True}
+2025-07-21 21:39:56,447 - INFO - Starting SVM model training...
+2025-07-21 21:39:56,447 - INFO - Initialized LinearSVC model.
+2025-07-21 21:39:56,447 - INFO - Using parameter grid for Grid Search: {'C': [0.5, 1, 2], 'tol': [1e-05, 0.0001, 0.001], 'max_iter': [1000, 2000, 3000, 4000], 'class_weight': [None, 'balanced']}
+2025-07-21 21:39:56,835 - INFO - Best parameters found: {'C': 0.5, 'class_weight': None, 'max_iter': 1000, 'tol': 1e-05}
+2025-07-21 21:39:56,843 - INFO - Classification Report:
+              precision    recall  f1-score   support
+
+         neg       0.65      0.92      0.76        12
+         pos       0.67      0.25      0.36         8
+
+    accuracy                           0.65        20
+   macro avg       0.66      0.58      0.56        20
+weighted avg       0.65      0.65      0.60        20
+
+2025-07-21 21:39:56,844 - INFO - Training SVM model with params: {'max_features': 400000, 'ngram_range': (2, 3), 'stop_words': 'english', 'lowercase': True, 'use_idf': True, 'smooth_idf': True, 'sublinear_tf': False}
+2025-07-21 21:39:56,844 - INFO - Starting SVM model training...
+2025-07-21 21:39:56,844 - INFO - Initialized LinearSVC model.
+2025-07-21 21:39:56,844 - INFO - Using parameter grid for Grid Search: {'C': [0.5, 1, 2], 'tol': [1e-05, 0.0001, 0.001], 'max_iter': [1000, 2000, 3000, 4000], 'class_weight': [None, 'balanced']}
+2025-07-21 21:39:57,289 - INFO - Best parameters found: {'C': 0.5, 'class_weight': None, 'max_iter': 1000, 'tol': 1e-05}
+2025-07-21 21:39:57,297 - INFO - Classification Report:
+              precision    recall  f1-score   support
+
+         neg       0.65      0.92      0.76        12
+         pos       0.67      0.25      0.36         8
+
+    accuracy                           0.65        20
+   macro avg       0.66      0.58      0.56        20
+weighted avg       0.65      0.65      0.60        20
+
+2025-07-21 21:39:57,299 - INFO - Training SVM model with params: {'max_features': 300000, 'ngram_range': (1, 2), 'stop_words': 'english', 'lowercase': True, 'use_idf': True, 'smooth_idf': True, 'sublinear_tf': True}
+2025-07-21 21:39:57,300 - INFO - Starting SVM model training...
+2025-07-21 21:39:57,301 - INFO - Initialized LinearSVC model.
+2025-07-21 21:39:57,305 - INFO - Using parameter grid for Grid Search: {'C': [0.5, 1, 2], 'tol': [1e-05, 0.0001, 0.001], 'max_iter': [1000, 2000, 3000, 4000], 'class_weight': [None, 'balanced']}
+2025-07-21 21:39:57,731 - INFO - Best parameters found: {'C': 0.5, 'class_weight': None, 'max_iter': 1000, 'tol': 1e-05}
+2025-07-21 21:39:57,743 - INFO - Classification Report:
+              precision    recall  f1-score   support
+
+         neg       0.67      1.00      0.80        12
+         pos       1.00      0.25      0.40         8
+
+    accuracy                           0.70        20
+   macro avg       0.83      0.62      0.60        20
+weighted avg       0.80      0.70      0.64        20
+
+2025-07-21 21:39:57,744 - INFO - Training SVM model with params: {'max_features': 300000, 'ngram_range': (1, 2), 'stop_words': 'english', 'lowercase': True, 'use_idf': True, 'smooth_idf': True, 'sublinear_tf': False}
+2025-07-21 21:39:57,744 - INFO - Starting SVM model training...
+2025-07-21 21:39:57,747 - INFO - Initialized LinearSVC model.
+2025-07-21 21:39:57,747 - INFO - Using parameter grid for Grid Search: {'C': [0.5, 1, 2], 'tol': [1e-05, 0.0001, 0.001], 'max_iter': [1000, 2000, 3000, 4000], 'class_weight': [None, 'balanced']}
+2025-07-21 21:39:58,259 - INFO - Best parameters found: {'C': 0.5, 'class_weight': 'balanced', 'max_iter': 1000, 'tol': 1e-05}
+2025-07-21 21:39:58,275 - INFO - Classification Report:
+              precision    recall  f1-score   support
+
+         neg       0.71      0.83      0.77        12
+         pos       0.67      0.50      0.57         8
+
+    accuracy                           0.70        20
+   macro avg       0.69      0.67      0.67        20
+weighted avg       0.70      0.70      0.69        20
+
+2025-07-21 21:39:58,276 - INFO - Training SVM model with params: {'max_features': 300000, 'ngram_range': (1, 3), 'stop_words': 'english', 'lowercase': True, 'use_idf': True, 'smooth_idf': True, 'sublinear_tf': True}
+2025-07-21 21:39:58,276 - INFO - Starting SVM model training...
+2025-07-21 21:39:58,276 - INFO - Initialized LinearSVC model.
+2025-07-21 21:39:58,277 - INFO - Using parameter grid for Grid Search: {'C': [0.5, 1, 2], 'tol': [1e-05, 0.0001, 0.001], 'max_iter': [1000, 2000, 3000, 4000], 'class_weight': [None, 'balanced']}
+2025-07-21 21:39:58,951 - INFO - Best parameters found: {'C': 0.5, 'class_weight': None, 'max_iter': 1000, 'tol': 1e-05}
+2025-07-21 21:39:58,959 - INFO - Classification Report:
+              precision    recall  f1-score   support
+
+         neg       0.63      1.00      0.77        12
+         pos       1.00      0.12      0.22         8
+
+    accuracy                           0.65        20
+   macro avg       0.82      0.56      0.50        20
+weighted avg       0.78      0.65      0.55        20
+
+2025-07-21 21:39:58,960 - INFO - Training SVM model with params: {'max_features': 300000, 'ngram_range': (1, 3), 'stop_words': 'english', 'lowercase': True, 'use_idf': True, 'smooth_idf': True, 'sublinear_tf': False}
+2025-07-21 21:39:58,960 - INFO - Starting SVM model training...
+2025-07-21 21:39:58,960 - INFO - Initialized LinearSVC model.
+2025-07-21 21:39:58,961 - INFO - Using parameter grid for Grid Search: {'C': [0.5, 1, 2], 'tol': [1e-05, 0.0001, 0.001], 'max_iter': [1000, 2000, 3000, 4000], 'class_weight': [None, 'balanced']}
+2025-07-21 21:40:00,066 - INFO - Best parameters found: {'C': 0.5, 'class_weight': None, 'max_iter': 1000, 'tol': 1e-05}
+2025-07-21 21:40:00,080 - INFO - Classification Report:
+              precision    recall  f1-score   support
+
+         neg       0.63      1.00      0.77        12
+         pos       1.00      0.12      0.22         8
+
+    accuracy                           0.65        20
+   macro avg       0.82      0.56      0.50        20
+weighted avg       0.78      0.65      0.55        20
+
+2025-07-21 21:40:00,081 - INFO - Training SVM model with params: {'max_features': 300000, 'ngram_range': (2, 3), 'stop_words': 'english', 'lowercase': True, 'use_idf': True, 'smooth_idf': True, 'sublinear_tf': True}
+2025-07-21 21:40:00,081 - INFO - Starting SVM model training...
+2025-07-21 21:40:00,082 - INFO - Initialized LinearSVC model.
+2025-07-21 21:40:00,082 - INFO - Using parameter grid for Grid Search: {'C': [0.5, 1, 2], 'tol': [1e-05, 0.0001, 0.001], 'max_iter': [1000, 2000, 3000, 4000], 'class_weight': [None, 'balanced']}
+2025-07-21 21:40:00,835 - INFO - Best parameters found: {'C': 0.5, 'class_weight': None, 'max_iter': 1000, 'tol': 1e-05}
+2025-07-21 21:40:00,851 - INFO - Classification Report:
+              precision    recall  f1-score   support
+
+         neg       0.65      0.92      0.76        12
+         pos       0.67      0.25      0.36         8
+
+    accuracy                           0.65        20
+   macro avg       0.66      0.58      0.56        20
+weighted avg       0.65      0.65      0.60        20
+
+2025-07-21 21:40:00,852 - INFO - Training SVM model with params: {'max_features': 300000, 'ngram_range': (2, 3), 'stop_words': 'english', 'lowercase': True, 'use_idf': True, 'smooth_idf': True, 'sublinear_tf': False}
+2025-07-21 21:40:00,853 - INFO - Starting SVM model training...
+2025-07-21 21:40:00,853 - INFO - Initialized LinearSVC model.
+2025-07-21 21:40:00,853 - INFO - Using parameter grid for Grid Search: {'C': [0.5, 1, 2], 'tol': [1e-05, 0.0001, 0.001], 'max_iter': [1000, 2000, 3000, 4000], 'class_weight': [None, 'balanced']}
+2025-07-21 21:40:01,532 - INFO - Best parameters found: {'C': 0.5, 'class_weight': None, 'max_iter': 1000, 'tol': 1e-05}
+2025-07-21 21:40:01,548 - INFO - Classification Report:
+              precision    recall  f1-score   support
+
+         neg       0.65      0.92      0.76        12
+         pos       0.67      0.25      0.36         8
+
+    accuracy                           0.65        20
+   macro avg       0.66      0.58      0.56        20
+weighted avg       0.65      0.65      0.60        20
+
+2025-07-21 21:40:01,549 - INFO - Saving SVM model to project_root/models/svm__max_features=50000-ngram_range=1_2-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=False.joblib
+2025-07-21 21:40:01,551 - INFO - SVM model saved to project_root/models/svm__max_features=50000-ngram_range=1_2-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=False.joblib
+2025-07-21 21:40:01,553 - INFO - Best SVM model saved with parameters: {'max_features': 50000, 'ngram_range': (1, 2), 'stop_words': 'english', 'lowercase': True, 'use_idf': True, 'smooth_idf': True, 'sublinear_tf': False}
+2025-07-21 21:40:01,560 - INFO - Best SVM model saved with score: 0.595238
+2025-07-21 21:40:01,570 - INFO - Selected the best encoder based on the evaluation.
+2025-07-21 21:40:01,570 - INFO - Selected encoder: encoded__max_features=50000-ngram_range=1_2-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=False

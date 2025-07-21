@@ -7,8 +7,9 @@ import itertools
 
 # ─── Project Imports ─────────────────────────────────────────────────────────────
 import src.data as dat
+from src.data import data_loader
 import src.preprocessing as prep
-import src.svm as svm
+import src.svm.training as training
 from src.config import logging_config
 
 # ─── Path Imports ────────────────────────────────────────────────────────────────
@@ -77,7 +78,7 @@ def main():
         test_set.data = prep.preprocessing_pipeline.preprocessing_pipeline(test_set.data, name="test_set")
 
         # Save the preprocessed datasets to the DATA_DIR
-        path = CLEANED_DATA_TXT_DIR / "cleaned_dataset_txt" # Define the path to save the cleaned datasets
+        path = CLEANED_DATA_TXT_DIR 
         dat.data_loader.save_dataset_as_txt(train_set, split="train", path=path)
         dat.data_loader.save_dataset_as_txt(test_set, split="test", path=path)
 
@@ -99,12 +100,18 @@ def main():
         logger.info("Encoded dataset with parameters: %s", param_dict)
 
         # Encode the dataset using the TF-IDF vectorizer
-        data_set = svm.encoder.tfidf_vectorizer(train_set, test_set, **param_dict)
+        data_set = training.encoder.tfidf_vectorizer(train_set, test_set, **param_dict)
+
+        # Create a file path from the encoding parameters
+        name = dat.data_loader.param_dict_to_filename(param_dict)
+        path = ENCODED_DATA_DIR / f"encoded__{name}.joblib"
 
         # Save the encoded datasets as sparse matrices
-        path = ENCODED_DATA_DIR / f"encoded_dataset.joblib"  
         dat.data_loader.save_encoded_dataset_as_sparse_matrix(data_set, path=path)
         logger.info("Encoded dataset saved to %s", path)
+
+        # Store the encoded dataset in the dictionary
+        encoded_datasets[name] = (data_set, param_dict)
 
     else:
         logger.info("Fine-tuning encoder. Generating multiple encoded datasets with different parameters.")
@@ -120,7 +127,7 @@ def main():
             logger.info("Encoding dataset with parameters: %s", param_dict)
             
             # Encode the datasets using the TF-IDF vectorizer
-            data_set = svm.encoder.tfidf_vectorizer(train_set, test_set, **param_dict)
+            data_set = training.encoder.tfidf_vectorizer(train_set, test_set, **param_dict)
             
             # Create a file path from the encoding parameters
             name = dat.data_loader.param_dict_to_filename(param_dict)
@@ -141,11 +148,11 @@ def main():
         logger.info("Skipping fine-tuning of the encoder. Training SVM model with default parameters.")
 
         # Train the SVM model using the encoded datasets
-        model = svm.training.train_svm_model(data_set)
+        model = training.training_pipeline.train_svm_model(data_set)
 
         # Create a file path from the parameters
-        name = dat.data_loader.param_dict_to_filename(param_dict)
-        path = MODEL_DIR / f"svm__{name}.joblib"
+        name_final_model = encoded_datasets.keys()[0] 
+        path = MODEL_DIR / f"svm__{name_final_model}.joblib"
 
         # Save the trained SVM model
         dat.data_loader.save_svm_model(model, path=path)
@@ -166,14 +173,14 @@ def main():
             logger.info(f"Training SVM model with params: %s", param_dict)
 
             # Train the SVM model using the encoded datasets
-            model = svm.training.train_svm_model(data_set)
+            model = training.training_pipeline.train_svm_model(data_set)
 
             # Store the model in the dictionary
             models[name] = (model, param_dict)
 
         # Store the best models based on their scores
         best_models = []
-        for model_and_params in models.values():
+        for name, model_and_params in models.items():
             # Get the model and the training parameters
             model = model_and_params[0]
             param_dict = model_and_params[1]
@@ -183,19 +190,38 @@ def main():
             model = model.best_estimator_
 
             # Store the models with their score as key
-            best_models.append((model, param_dict, score))
+            best_models.append((model, param_dict, score, name))
 
         # Get the best model based on the highest score
         best_models.sort(key=lambda x: x[2], reverse=True)
-        best_model, best_params, best_score = best_models[0]
+        best_model, best_params, best_score, best_name = best_models[0]
 
         # Create a file path from the parameters
-        name = dat.data_loader.param_dict_to_filename(best_params)
-        path = MODEL_DIR / f"best_svm__{name}.joblib"
+        name_final_model = best_name
+        path = MODEL_DIR / f"svm__{name_final_model}.joblib"
 
         # Save the best SVM model
         dat.data_loader.save_svm_model(best_model, path=path)
-        logger.info(f"Best SVM model saved with parameters=\n{best_params}\nand score={best_score:.4f}")
+        logger.info("Best SVM model saved with parameters: %s", best_params)
+        logger.info("Best SVM model saved with score: %f", best_score)
+
+
+    # ─── Select the best encoder based on the evaluation ───────────────────────────────────────────────────────
+    logger.info("Selected the best encoder based on the evaluation.")
+    name_final_encoder = name_final_model 
+    logger.info("Selected encoder: %s", name_final_encoder)
+
+    # Get the dataset
+    best_dataset = encoded_datasets[name_final_encoder][0]
+    
+    # Get the best encoder from the encoded datasets
+    best_encoder = best_dataset.vectorizer
+
+
+    # Save the best encoder
+    path_encoder = MODEL_DIR / f"vectorizer__{name_final_encoder}.joblib"
+    data_loader.save_encoder(path_encoder, best_encoder)
+    logger.info("Best encoder saved to %s", path_encoder)
 
 
 if __name__ == "__main__":

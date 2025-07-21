@@ -1,0 +1,293 @@
+2025-07-21 21:01:10,821 - INFO - Using existing spaCy model 'en_core_web_sm'.
+2025-07-21 21:01:17,478 - INFO - Saving file to project_root/data/file.txt
+2025-07-21 21:01:17,533 - INFO - Loading text files from /private/var/folders/sh/56pwtvdx20q2vs3077_2grkw0000gn/T/pytest-of-lau/pytest-29/test_load_texts_from_folder0 with test_mode=False and sample_count=20
+2025-07-21 21:01:17,534 - INFO - Loaded 2 samples from /private/var/folders/sh/56pwtvdx20q2vs3077_2grkw0000gn/T/pytest-of-lau/pytest-29/test_load_texts_from_folder0
+2025-07-21 21:01:17,536 - INFO - Saving dataset to /private/var/folders/sh/56pwtvdx20q2vs3077_2grkw0000gn/T/pytest-of-lau/pytest-29/test_save_dataset_as_txt0 for split 'train'
+2025-07-21 21:01:17,536 - INFO - Created directory: /private/var/folders/sh/56pwtvdx20q2vs3077_2grkw0000gn/T/pytest-of-lau/pytest-29/test_save_dataset_as_txt0/train/neg
+2025-07-21 21:01:17,537 - INFO - Created directory: /private/var/folders/sh/56pwtvdx20q2vs3077_2grkw0000gn/T/pytest-of-lau/pytest-29/test_save_dataset_as_txt0/train/pos
+2025-07-21 21:01:17,537 - DEBUG - Saved file: /private/var/folders/sh/56pwtvdx20q2vs3077_2grkw0000gn/T/pytest-of-lau/pytest-29/test_save_dataset_as_txt0/train/neg/0.txt
+2025-07-21 21:01:17,537 - DEBUG - Saved file: /private/var/folders/sh/56pwtvdx20q2vs3077_2grkw0000gn/T/pytest-of-lau/pytest-29/test_save_dataset_as_txt0/train/pos/1.txt
+2025-07-21 21:01:17,538 - INFO - Saved 2 files to /private/var/folders/sh/56pwtvdx20q2vs3077_2grkw0000gn/T/pytest-of-lau/pytest-29/test_save_dataset_as_txt0/train
+2025-07-21 21:01:17,541 - INFO - Saving encoded dataset to /private/var/folders/sh/56pwtvdx20q2vs3077_2grkw0000gn/T/pytest-of-lau/pytest-29/test_save_and_load_sparse_matr0
+2025-07-21 21:01:17,762 - INFO - Saving SVM model to /private/var/folders/sh/56pwtvdx20q2vs3077_2grkw0000gn/T/pytest-of-lau/pytest-29/test_save_load_svm_model0/svm_model.joblib
+2025-07-21 21:01:17,765 - INFO - SVM model saved to /private/var/folders/sh/56pwtvdx20q2vs3077_2grkw0000gn/T/pytest-of-lau/pytest-29/test_save_load_svm_model0/svm_model.joblib
+2025-07-21 21:01:17,765 - INFO - Loading SVM model from /private/var/folders/sh/56pwtvdx20q2vs3077_2grkw0000gn/T/pytest-of-lau/pytest-29/test_save_load_svm_model0/svm_model.joblib
+2025-07-21 21:01:17,767 - INFO - SVM model loaded successfully
+2025-07-21 21:01:17,769 - INFO - Saving encoder to TfidfVectorizer()
+2025-07-21 21:01:17,788 - DEBUG - Converting text to lower case: Hello World!
+2025-07-21 21:01:17,788 - DEBUG - Converted text: hello world!
+2025-07-21 21:01:17,789 - DEBUG - Stripping whitespace from text:    Hello World!   
+2025-07-21 21:01:17,790 - DEBUG - Stripped text: Hello World!
+2025-07-21 21:01:17,791 - DEBUG - Replacing wrong quotation marks in text: This is a `test` with wrong ´quotation´ marks.
+2025-07-21 21:01:17,791 - DEBUG - Text after replacing quotation marks: This is a 'test' with wrong 'quotation' marks.
+2025-07-21 21:01:17,792 - DEBUG - Removing non-alphanumeric characters from text: Keep all this characters: !?'".,#\-:/%$ But remove this: @&*()_+=<>`~
+2025-07-21 21:01:17,792 - DEBUG - Text after removing non-alphanumeric characters: Keep all this characters: !?'".,#-:/%$ But remove this: 
+2025-07-21 21:01:17,793 - DEBUG - Removing non-alphanumeric characters from text: Keep all this characters: !?.,' But remove this: @&*()_+=<§$%&/(/)(&=)/()/>`~
+2025-07-21 21:01:17,794 - DEBUG - Text after removing non-alphanumeric characters: Keep all this characters !?.,' But remove this 
+2025-07-21 21:01:17,795 - DEBUG - Removing numeric and punctuation from text: Remove all alphanumeric characters and punctuation: 1234567890!@#$%^&*()'_+
+2025-07-21 21:01:17,795 - DEBUG - Text after removing numeric and punctuation: Remove all alphanumeric characters and punctuation 
+2025-07-21 21:01:17,796 - DEBUG - Removing multiple punctuation from text: Hello!!! How are you??? I'm fine... really!!!
+2025-07-21 21:01:17,796 - DEBUG - Text after removing multiple punctuation: Hello! How are you? I'm fine. really!
+2025-07-21 21:01:17,797 - DEBUG - Removing URLs from text: Visit our website at https://example.com/watch?v=Mc9JAra8WZU&list=PLMWaZv9C0otal1FO for more information or just type www.example.com.
+2025-07-21 21:01:17,798 - DEBUG - Text after removing URLs: Visit our website at  for more information or just type 
+2025-07-21 21:01:17,799 - DEBUG - Removing HTML tags from text: <p>This is a <strong>test</strong> with <a href='https://example.com'>links</a>.</p>
+2025-07-21 21:01:17,799 - DEBUG - Text after removing HTML tags: This is a test with links.
+2025-07-21 21:01:17,800 - DEBUG - Starting regex cleaning pipeline for text:   Hello!!!  
+2025-07-21 21:01:17,800 - DEBUG - Converting text to lower case:   Hello!!!  
+2025-07-21 21:01:17,801 - DEBUG - Converted text:   hello!!!  
+2025-07-21 21:01:17,801 - DEBUG - Removing HTML tags from text:   hello!!!  
+2025-07-21 21:01:17,801 - DEBUG - Text after removing HTML tags:   hello!!!  
+2025-07-21 21:01:17,801 - DEBUG - Replacing wrong quotation marks in text:   hello!!!  
+2025-07-21 21:01:17,801 - DEBUG - Text after replacing quotation marks:   hello!!!  
+2025-07-21 21:01:17,801 - DEBUG - Removing URLs from text:   hello!!!  
+2025-07-21 21:01:17,802 - DEBUG - Text after removing URLs:   hello!!!  
+2025-07-21 21:01:17,802 - DEBUG - Removing non-alphanumeric characters from text:   hello!!!  
+2025-07-21 21:01:17,802 - DEBUG - Text after removing non-alphanumeric characters:   hello!!!  
+2025-07-21 21:01:17,802 - DEBUG - Removing multiple punctuation from text:   hello!!!  
+2025-07-21 21:01:17,802 - DEBUG - Text after removing multiple punctuation:   hello!  
+2025-07-21 21:01:17,802 - DEBUG - Stripping whitespace from text:   hello!  
+2025-07-21 21:01:17,803 - DEBUG - Stripped text: hello!
+2025-07-21 21:01:17,803 - DEBUG - Final cleaned text: hello!
+2025-07-21 21:01:17,804 - DEBUG - Starting regex cleaning pipeline for text:   Hello!!!  
+2025-07-21 21:01:17,804 - DEBUG - Converting text to lower case:   Hello!!!  
+2025-07-21 21:01:17,805 - DEBUG - Converted text:   hello!!!  
+2025-07-21 21:01:17,805 - DEBUG - Removing HTML tags from text:   hello!!!  
+2025-07-21 21:01:17,805 - DEBUG - Text after removing HTML tags:   hello!!!  
+2025-07-21 21:01:17,805 - DEBUG - Replacing wrong quotation marks in text:   hello!!!  
+2025-07-21 21:01:17,805 - DEBUG - Text after replacing quotation marks:   hello!!!  
+2025-07-21 21:01:17,806 - DEBUG - Removing URLs from text:   hello!!!  
+2025-07-21 21:01:17,806 - DEBUG - Text after removing URLs:   hello!!!  
+2025-07-21 21:01:17,806 - DEBUG - Removing numeric and punctuation from text:   hello!!!  
+2025-07-21 21:01:17,806 - DEBUG - Text after removing numeric and punctuation:   hello  
+2025-07-21 21:01:17,807 - DEBUG - Stripping whitespace from text:   hello  
+2025-07-21 21:01:17,807 - DEBUG - Stripped text: hello
+2025-07-21 21:01:17,807 - DEBUG - Final cleaned text: hello
+2025-07-21 21:01:17,808 - DEBUG - Starting regex cleaning pipeline for text: This is a `test` with wrong ´quotation´ marks.
+2025-07-21 21:01:17,808 - DEBUG - Converting text to lower case: This is a `test` with wrong ´quotation´ marks.
+2025-07-21 21:01:17,809 - DEBUG - Converted text: this is a `test` with wrong ´quotation´ marks.
+2025-07-21 21:01:17,809 - DEBUG - Removing HTML tags from text: this is a `test` with wrong ´quotation´ marks.
+2025-07-21 21:01:17,809 - DEBUG - Text after removing HTML tags: this is a `test` with wrong ´quotation´ marks.
+2025-07-21 21:01:17,809 - DEBUG - Replacing wrong quotation marks in text: this is a `test` with wrong ´quotation´ marks.
+2025-07-21 21:01:17,809 - DEBUG - Text after replacing quotation marks: this is a 'test' with wrong 'quotation' marks.
+2025-07-21 21:01:17,809 - DEBUG - Removing URLs from text: this is a 'test' with wrong 'quotation' marks.
+2025-07-21 21:01:17,810 - DEBUG - Text after removing URLs: this is a 'test' with wrong 'quotation' marks.
+2025-07-21 21:01:17,810 - DEBUG - Removing non-alphanumeric characters from text: this is a 'test' with wrong 'quotation' marks.
+2025-07-21 21:01:17,810 - DEBUG - Text after removing non-alphanumeric characters: this is a 'test' with wrong 'quotation' marks.
+2025-07-21 21:01:17,810 - DEBUG - Removing multiple punctuation from text: this is a 'test' with wrong 'quotation' marks.
+2025-07-21 21:01:17,810 - DEBUG - Text after removing multiple punctuation: this is a 'test' with wrong 'quotation' marks.
+2025-07-21 21:01:17,810 - DEBUG - Stripping whitespace from text: this is a 'test' with wrong 'quotation' marks.
+2025-07-21 21:01:17,811 - DEBUG - Stripped text: this is a 'test' with wrong 'quotation' marks.
+2025-07-21 21:01:17,811 - DEBUG - Final cleaned text: this is a 'test' with wrong 'quotation' marks.
+2025-07-21 21:01:17,812 - DEBUG - Starting regex cleaning pipeline for text: This is a `test` with wrong ´quotation´ marks.
+2025-07-21 21:01:17,812 - DEBUG - Converting text to lower case: This is a `test` with wrong ´quotation´ marks.
+2025-07-21 21:01:17,812 - DEBUG - Converted text: this is a `test` with wrong ´quotation´ marks.
+2025-07-21 21:01:17,812 - DEBUG - Removing HTML tags from text: this is a `test` with wrong ´quotation´ marks.
+2025-07-21 21:01:17,813 - DEBUG - Text after removing HTML tags: this is a `test` with wrong ´quotation´ marks.
+2025-07-21 21:01:17,813 - DEBUG - Replacing wrong quotation marks in text: this is a `test` with wrong ´quotation´ marks.
+2025-07-21 21:01:17,813 - DEBUG - Text after replacing quotation marks: this is a 'test' with wrong 'quotation' marks.
+2025-07-21 21:01:17,813 - DEBUG - Removing URLs from text: this is a 'test' with wrong 'quotation' marks.
+2025-07-21 21:01:17,813 - DEBUG - Text after removing URLs: this is a 'test' with wrong 'quotation' marks.
+2025-07-21 21:01:17,813 - DEBUG - Removing numeric and punctuation from text: this is a 'test' with wrong 'quotation' marks.
+2025-07-21 21:01:17,814 - DEBUG - Text after removing numeric and punctuation: this is a test with wrong quotation marks
+2025-07-21 21:01:17,814 - DEBUG - Stripping whitespace from text: this is a test with wrong quotation marks
+2025-07-21 21:01:17,814 - DEBUG - Stripped text: this is a test with wrong quotation marks
+2025-07-21 21:01:17,814 - DEBUG - Final cleaned text: this is a test with wrong quotation marks
+2025-07-21 21:01:17,815 - DEBUG - Starting regex cleaning pipeline for text: Visit our website at https://example.com/watch?v=Mc9JAra8WZU&list=PLMWaZv9C0otal1FO for more information, or just type www.example.com.
+2025-07-21 21:01:17,816 - DEBUG - Converting text to lower case: Visit our website at https://example.com/watch?v=Mc9JAra8WZU&list=PLMWaZv9C0otal1FO for more information, or just type www.example.com.
+2025-07-21 21:01:17,816 - DEBUG - Converted text: visit our website at https://example.com/watch?v=mc9jara8wzu&list=plmwazv9c0otal1fo for more information, or just type www.example.com.
+2025-07-21 21:01:17,816 - DEBUG - Removing HTML tags from text: visit our website at https://example.com/watch?v=mc9jara8wzu&list=plmwazv9c0otal1fo for more information, or just type www.example.com.
+2025-07-21 21:01:17,816 - DEBUG - Text after removing HTML tags: visit our website at https://example.com/watch?v=mc9jara8wzu&list=plmwazv9c0otal1fo for more information, or just type www.example.com.
+2025-07-21 21:01:17,816 - DEBUG - Replacing wrong quotation marks in text: visit our website at https://example.com/watch?v=mc9jara8wzu&list=plmwazv9c0otal1fo for more information, or just type www.example.com.
+2025-07-21 21:01:17,817 - DEBUG - Text after replacing quotation marks: visit our website at https://example.com/watch?v=mc9jara8wzu&list=plmwazv9c0otal1fo for more information, or just type www.example.com.
+2025-07-21 21:01:17,817 - DEBUG - Removing URLs from text: visit our website at https://example.com/watch?v=mc9jara8wzu&list=plmwazv9c0otal1fo for more information, or just type www.example.com.
+2025-07-21 21:01:17,817 - DEBUG - Text after removing URLs: visit our website at  for more information, or just type 
+2025-07-21 21:01:17,817 - DEBUG - Removing non-alphanumeric characters from text: visit our website at  for more information, or just type 
+2025-07-21 21:01:17,817 - DEBUG - Text after removing non-alphanumeric characters: visit our website at  for more information, or just type 
+2025-07-21 21:01:17,817 - DEBUG - Removing multiple punctuation from text: visit our website at  for more information, or just type 
+2025-07-21 21:01:17,818 - DEBUG - Text after removing multiple punctuation: visit our website at  for more information, or just type 
+2025-07-21 21:01:17,818 - DEBUG - Stripping whitespace from text: visit our website at  for more information, or just type 
+2025-07-21 21:01:17,818 - DEBUG - Stripped text: visit our website at for more information, or just type
+2025-07-21 21:01:17,818 - DEBUG - Final cleaned text: visit our website at for more information, or just type
+2025-07-21 21:01:17,819 - DEBUG - Starting regex cleaning pipeline for text: Visit our website at https://example.com/watch?v=Mc9JAra8WZU&list=PLMWaZv9C0otal1FO for more information or just type www.example.com.
+2025-07-21 21:01:17,820 - DEBUG - Converting text to lower case: Visit our website at https://example.com/watch?v=Mc9JAra8WZU&list=PLMWaZv9C0otal1FO for more information or just type www.example.com.
+2025-07-21 21:01:17,820 - DEBUG - Converted text: visit our website at https://example.com/watch?v=mc9jara8wzu&list=plmwazv9c0otal1fo for more information or just type www.example.com.
+2025-07-21 21:01:17,820 - DEBUG - Removing HTML tags from text: visit our website at https://example.com/watch?v=mc9jara8wzu&list=plmwazv9c0otal1fo for more information or just type www.example.com.
+2025-07-21 21:01:17,820 - DEBUG - Text after removing HTML tags: visit our website at https://example.com/watch?v=mc9jara8wzu&list=plmwazv9c0otal1fo for more information or just type www.example.com.
+2025-07-21 21:01:17,820 - DEBUG - Replacing wrong quotation marks in text: visit our website at https://example.com/watch?v=mc9jara8wzu&list=plmwazv9c0otal1fo for more information or just type www.example.com.
+2025-07-21 21:01:17,821 - DEBUG - Text after replacing quotation marks: visit our website at https://example.com/watch?v=mc9jara8wzu&list=plmwazv9c0otal1fo for more information or just type www.example.com.
+2025-07-21 21:01:17,821 - DEBUG - Removing URLs from text: visit our website at https://example.com/watch?v=mc9jara8wzu&list=plmwazv9c0otal1fo for more information or just type www.example.com.
+2025-07-21 21:01:17,821 - DEBUG - Text after removing URLs: visit our website at  for more information or just type 
+2025-07-21 21:01:17,821 - DEBUG - Removing numeric and punctuation from text: visit our website at  for more information or just type 
+2025-07-21 21:01:17,821 - DEBUG - Text after removing numeric and punctuation: visit our website at  for more information or just type 
+2025-07-21 21:01:17,821 - DEBUG - Stripping whitespace from text: visit our website at  for more information or just type 
+2025-07-21 21:01:17,822 - DEBUG - Stripped text: visit our website at for more information or just type
+2025-07-21 21:01:17,822 - DEBUG - Final cleaned text: visit our website at for more information or just type
+2025-07-21 21:01:17,823 - DEBUG - Expanding contractions in text: i'm going to the store.
+2025-07-21 21:01:17,830 - DEBUG - Text after expanding contractions: i am going to the store.
+2025-07-21 21:01:17,830 - DEBUG - Expanding contractions in text: he's not here.
+2025-07-21 21:01:17,830 - DEBUG - Text after expanding contractions: he is not here.
+2025-07-21 21:01:17,830 - DEBUG - Expanding contractions in text: they've already left.
+2025-07-21 21:01:17,831 - DEBUG - Text after expanding contractions: they have already left.
+2025-07-21 21:01:17,831 - DEBUG - Expanding contractions in text: she'll be back, don't worry.
+2025-07-21 21:01:17,831 - DEBUG - Text after expanding contractions: she will be back, do not worry.
+2025-07-21 21:01:17,833 - DEBUG - Handling slang terms in text: wtf is going on?
+2025-07-21 21:01:17,838 - DEBUG - Text after handling slang terms: what the fuck is going on?
+2025-07-21 21:01:17,838 - DEBUG - Handling slang terms in text: fyi, the meeting is at 3pm.
+2025-07-21 21:01:17,839 - DEBUG - Text after handling slang terms: for your information, the meeting is at 3pm.
+2025-07-21 21:01:17,839 - DEBUG - Handling slang terms in text: lmao, that was hilarious!
+2025-07-21 21:01:17,840 - DEBUG - Text after handling slang terms: funny, that was hilarious!
+2025-07-21 21:01:17,840 - DEBUG - Handling slang terms in text: omfg, did you see that?
+2025-07-21 21:01:17,841 - DEBUG - Text after handling slang terms: oh god, did you see that?
+2025-07-21 21:01:17,841 - DEBUG - Handling slang terms in text: wtf, this sux!
+2025-07-21 21:01:17,841 - DEBUG - Text after handling slang terms: what the fuck, this is bad!
+2025-07-21 21:01:17,842 - DEBUG - Starting filtering pipeline for text: i'm gonna go now, fyi.
+2025-07-21 21:01:17,843 - DEBUG - Expanding contractions in text: i'm gonna go now, fyi.
+2025-07-21 21:01:17,849 - DEBUG - Text after expanding contractions: i am gonna go now, fyi.
+2025-07-21 21:01:17,849 - DEBUG - Handling slang terms in text: i am gonna go now, fyi.
+2025-07-21 21:01:17,855 - DEBUG - Text after handling slang terms: i am going to go now, for your information.
+2025-07-21 21:01:17,855 - DEBUG - Final filtered text: i am going to go now, for your information.
+2025-07-21 21:01:17,856 - DEBUG - Starting filtering pipeline for text: he's not here, lmao.
+2025-07-21 21:01:17,857 - DEBUG - Expanding contractions in text: he's not here, lmao.
+2025-07-21 21:01:17,863 - DEBUG - Text after expanding contractions: he is not here, lmao.
+2025-07-21 21:01:17,863 - DEBUG - Handling slang terms in text: he is not here, lmao.
+2025-07-21 21:01:17,869 - DEBUG - Text after handling slang terms: he is not here, funny.
+2025-07-21 21:01:17,869 - DEBUG - Final filtered text: he is not here, funny.
+2025-07-21 21:01:17,870 - DEBUG - Starting filtering pipeline for text: they've left. omfg!
+2025-07-21 21:01:17,870 - DEBUG - Expanding contractions in text: they've left. omfg!
+2025-07-21 21:01:17,877 - DEBUG - Text after expanding contractions: they have left. omfg!
+2025-07-21 21:01:17,877 - DEBUG - Handling slang terms in text: they have left. omfg!
+2025-07-21 21:01:17,882 - DEBUG - Text after handling slang terms: they have left. oh god!
+2025-07-21 21:01:17,883 - DEBUG - Final filtered text: they have left. oh god!
+2025-07-21 21:01:17,884 - DEBUG - Starting filtering pipeline for text: she'll be back, don't worry. sux, right?
+2025-07-21 21:01:17,884 - DEBUG - Expanding contractions in text: she'll be back, don't worry. sux, right?
+2025-07-21 21:01:17,891 - DEBUG - Text after expanding contractions: she will be back, do not worry. sux, right?
+2025-07-21 21:01:17,891 - DEBUG - Handling slang terms in text: she will be back, do not worry. sux, right?
+2025-07-21 21:01:17,896 - DEBUG - Text after handling slang terms: she will be back, do not worry. is bad, right?
+2025-07-21 21:01:17,897 - DEBUG - Final filtered text: she will be back, do not worry. is bad, right?
+2025-07-21 21:01:17,898 - DEBUG - Starting filtering pipeline for text: wtf, shouldn't he be here?
+2025-07-21 21:01:17,898 - DEBUG - Expanding contractions in text: wtf, shouldn't he be here?
+2025-07-21 21:01:17,904 - DEBUG - Text after expanding contractions: wtf, should not he be here?
+2025-07-21 21:01:17,905 - DEBUG - Handling slang terms in text: wtf, should not he be here?
+2025-07-21 21:01:17,910 - DEBUG - Text after handling slang terms: what the fuck, should not he be here?
+2025-07-21 21:01:17,910 - DEBUG - Final filtered text: what the fuck, should not he be here?
+2025-07-21 21:01:17,912 - DEBUG - Lemmatizing text: running
+2025-07-21 21:01:17,924 - DEBUG - Lemmatized text: run
+2025-07-21 21:01:17,924 - DEBUG - Lemmatizing text: ran
+2025-07-21 21:01:17,928 - DEBUG - Lemmatized text: run
+2025-07-21 21:01:17,928 - DEBUG - Lemmatizing text: children
+2025-07-21 21:01:17,932 - DEBUG - Lemmatized text: child
+2025-07-21 21:01:17,932 - DEBUG - Lemmatizing text: mice
+2025-07-21 21:01:17,936 - DEBUG - Lemmatized text: mouse
+2025-07-21 21:01:17,936 - DEBUG - Lemmatizing text: went
+2025-07-21 21:01:17,940 - DEBUG - Lemmatized text: go
+2025-07-21 21:01:17,941 - DEBUG - Lemmatizing text: I went to school, but it was closed, so I kept searching and was successful.
+2025-07-21 21:01:17,949 - DEBUG - Lemmatized text: I go to school , but it be closed , so I keep search and be successful .
+2025-07-21 21:01:17,950 - DEBUG - Starting preprocessing pipeline for default
+2025-07-21 21:01:17,950 - DEBUG - Preprocessing a single text for default
+2025-07-21 21:01:17,950 - DEBUG - Starting regex cleaning pipeline for text: 
+        OMG! I can't believe this "Movie"!!! It had 10 explosions in the first 5 minutes... 🤯
+        Check it out at https://example.com/movie?id=123 – you'll love it! 
+        Also, what's with the 'acting'? Lol. That guy was like: “I’m gonna save the world!” – and then *boom*.
+        Total nonsense, but kinda fun tbh...
+        
+2025-07-21 21:01:17,951 - DEBUG - Converting text to lower case: 
+        OMG! I can't believe this "Movie"!!! It had 10 explosions in the first 5 minutes... 🤯
+        Check it out at https://example.com/movie?id=123 – you'll love it! 
+        Also, what's with the 'acting'? Lol. That guy was like: “I’m gonna save the world!” – and then *boom*.
+        Total nonsense, but kinda fun tbh...
+        
+2025-07-21 21:01:17,951 - DEBUG - Converted text: 
+        omg! i can't believe this "movie"!!! it had 10 explosions in the first 5 minutes... 🤯
+        check it out at https://example.com/movie?id=123 – you'll love it! 
+        also, what's with the 'acting'? lol. that guy was like: “i’m gonna save the world!” – and then *boom*.
+        total nonsense, but kinda fun tbh...
+        
+2025-07-21 21:01:17,951 - DEBUG - Removing HTML tags from text: 
+        omg! i can't believe this "movie"!!! it had 10 explosions in the first 5 minutes... 🤯
+        check it out at https://example.com/movie?id=123 – you'll love it! 
+        also, what's with the 'acting'? lol. that guy was like: “i’m gonna save the world!” – and then *boom*.
+        total nonsense, but kinda fun tbh...
+        
+2025-07-21 21:01:17,951 - DEBUG - Text after removing HTML tags: 
+        omg! i can't believe this "movie"!!! it had 10 explosions in the first 5 minutes... 🤯
+        check it out at https://example.com/movie?id=123 – you'll love it! 
+        also, what's with the 'acting'? lol. that guy was like: “i’m gonna save the world!” – and then *boom*.
+        total nonsense, but kinda fun tbh...
+        
+2025-07-21 21:01:17,952 - DEBUG - Replacing wrong quotation marks in text: 
+        omg! i can't believe this "movie"!!! it had 10 explosions in the first 5 minutes... 🤯
+        check it out at https://example.com/movie?id=123 – you'll love it! 
+        also, what's with the 'acting'? lol. that guy was like: “i’m gonna save the world!” – and then *boom*.
+        total nonsense, but kinda fun tbh...
+        
+2025-07-21 21:01:17,952 - DEBUG - Text after replacing quotation marks: 
+        omg! i can't believe this "movie"!!! it had 10 explosions in the first 5 minutes... 🤯
+        check it out at https://example.com/movie?id=123 – you'll love it! 
+        also, what's with the 'acting'? lol. that guy was like: “i’m gonna save the world!” – and then *boom*.
+        total nonsense, but kinda fun tbh...
+        
+2025-07-21 21:01:17,952 - DEBUG - Removing URLs from text: 
+        omg! i can't believe this "movie"!!! it had 10 explosions in the first 5 minutes... 🤯
+        check it out at https://example.com/movie?id=123 – you'll love it! 
+        also, what's with the 'acting'? lol. that guy was like: “i’m gonna save the world!” – and then *boom*.
+        total nonsense, but kinda fun tbh...
+        
+2025-07-21 21:01:17,952 - DEBUG - Text after removing URLs: 
+        omg! i can't believe this "movie"!!! it had 10 explosions in the first 5 minutes... 🤯
+        check it out at  – you'll love it! 
+        also, what's with the 'acting'? lol. that guy was like: “i’m gonna save the world!” – and then *boom*.
+        total nonsense, but kinda fun tbh...
+        
+2025-07-21 21:01:17,953 - DEBUG - Removing numeric and punctuation from text: 
+        omg! i can't believe this "movie"!!! it had 10 explosions in the first 5 minutes... 🤯
+        check it out at  – you'll love it! 
+        also, what's with the 'acting'? lol. that guy was like: “i’m gonna save the world!” – and then *boom*.
+        total nonsense, but kinda fun tbh...
+        
+2025-07-21 21:01:17,953 - DEBUG - Text after removing numeric and punctuation: 
+        omg i cant believe this movie it had  explosions in the first  minutes 
+        check it out at   youll love it 
+        also whats with the acting lol that guy was like im gonna save the world  and then boom
+        total nonsense but kinda fun tbh
+        
+2025-07-21 21:01:17,953 - DEBUG - Stripping whitespace from text: 
+        omg i cant believe this movie it had  explosions in the first  minutes 
+        check it out at   youll love it 
+        also whats with the acting lol that guy was like im gonna save the world  and then boom
+        total nonsense but kinda fun tbh
+        
+2025-07-21 21:01:17,953 - DEBUG - Stripped text: omg i cant believe this movie it had explosions in the first minutes check it out at youll love it also whats with the acting lol that guy was like im gonna save the world and then boom total nonsense but kinda fun tbh
+2025-07-21 21:01:17,954 - DEBUG - Final cleaned text: omg i cant believe this movie it had explosions in the first minutes check it out at youll love it also whats with the acting lol that guy was like im gonna save the world and then boom total nonsense but kinda fun tbh
+2025-07-21 21:01:17,954 - DEBUG - Starting filtering pipeline for text: omg i cant believe this movie it had explosions in the first minutes check it out at youll love it also whats with the acting lol that guy was like im gonna save the world and then boom total nonsense but kinda fun tbh
+2025-07-21 21:01:17,954 - DEBUG - Expanding contractions in text: omg i cant believe this movie it had explosions in the first minutes check it out at youll love it also whats with the acting lol that guy was like im gonna save the world and then boom total nonsense but kinda fun tbh
+2025-07-21 21:01:17,961 - DEBUG - Text after expanding contractions: omg i cannot believe this movie it had explosions in the first minutes check it out at you will love it also what is with the acting lol that guy was like i am gonna save the world and then boom total nonsense but kinda fun tbh
+2025-07-21 21:01:17,961 - DEBUG - Handling slang terms in text: omg i cannot believe this movie it had explosions in the first minutes check it out at you will love it also what is with the acting lol that guy was like i am gonna save the world and then boom total nonsense but kinda fun tbh
+2025-07-21 21:01:17,967 - DEBUG - Text after handling slang terms: oh god i cannot believe this movie it had explosions in the first minutes check it out at you will love it also what is with the acting funny that guy was like i am going to save the world and then boom total nonsense but kind of fun to be honest
+2025-07-21 21:01:17,967 - DEBUG - Final filtered text: oh god i cannot believe this movie it had explosions in the first minutes check it out at you will love it also what is with the acting funny that guy was like i am going to save the world and then boom total nonsense but kind of fun to be honest
+2025-07-21 21:01:17,967 - DEBUG - Lemmatizing text: oh god i cannot believe this movie it had explosions in the first minutes check it out at you will love it also what is with the acting funny that guy was like i am going to save the world and then boom total nonsense but kind of fun to be honest
+2025-07-21 21:01:17,985 - DEBUG - Lemmatized text: oh god I can not believe this movie it have explosion in the first minute check it out at you will love it also what be with the act funny that guy be like I be go to save the world and then boom total nonsense but kind of fun to be honest
+2025-07-21 21:01:17,985 - DEBUG - Completed preprocessing pipeline for default
+2025-07-21 21:01:18,100 - INFO - Name                                                Stmts   Miss  Cover
+2025-07-21 21:01:18,101 - INFO - --------------------------------------------------------------------------------
+2025-07-21 21:01:18,101 - INFO - src/__init__.py                                         2      0    100%
+2025-07-21 21:01:18,101 - INFO - src/config/logging_config.py                           43      1     98%
+2025-07-21 21:01:18,101 - INFO - src/config/paths.py                                    20      0    100%
+2025-07-21 21:01:18,101 - INFO - src/config/test_logger.py                              10      1     90%
+2025-07-21 21:01:18,101 - INFO - src/data/__init__.py                                    2      0    100%
+2025-07-21 21:01:18,101 - INFO - src/data/data_classes.py                               12      0    100%
+2025-07-21 21:01:18,101 - INFO - src/data/data_loader.py                                67     16     76%
+2025-07-21 21:01:18,101 - INFO - src/data/download_data.py                              41     30     27%
+2025-07-21 21:01:18,101 - INFO - src/preprocessing/__init__.py                           2      0    100%
+2025-07-21 21:01:18,102 - INFO - src/preprocessing/clean_text.py                        64      0    100%
+2025-07-21 21:01:18,102 - INFO - src/preprocessing/filters.py                           23      0    100%
+2025-07-21 21:01:18,102 - INFO - src/preprocessing/lemmatization.py                     14      2     86%
+2025-07-21 21:01:18,102 - INFO - src/preprocessing/preprocessing_pipeline.py            22      3     86%
+2025-07-21 21:01:18,102 - INFO - src/svm/__init__.py                                     2      0    100%
+2025-07-21 21:01:18,102 - INFO - src/svm/prediction/__init__.py                          0      0    100%
+2025-07-21 21:01:18,102 - INFO - src/svm/prediction/prediction_pipeline.py               0      0    100%
+2025-07-21 21:01:18,102 - INFO - src/svm/training/__init__.py                            2      0    100%
+2025-07-21 21:01:18,102 - INFO - src/svm/training/encoder.py                            19     14     26%
+2025-07-21 21:01:18,102 - INFO - src/svm/training/encoding_pipeline.py                   9      5     44%
+2025-07-21 21:01:18,102 - INFO - src/svm/training/training_pipeline.py                  33     17     48%
+2025-07-21 21:01:18,103 - INFO - src/web_scraping/__init__.py                            0      0    100%
+2025-07-21 21:01:18,103 - INFO - src/web_scraping/web_scraping.py                        0      0    100%

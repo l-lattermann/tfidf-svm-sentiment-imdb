@@ -1,11 +1,7 @@
 """Script to load data, encode features, and apply preprocessing pipeline."""
 
-# ─── Standard Library Imports ────────────────────────────────────────────────────
-from pathlib import Path
-import sys
-
 # ─── Project Module Imports ──────────────────────────────────────────────────────
-from src.svm import encoder
+from src.svm.training import encoder
 from src.config import logging_config
 
 

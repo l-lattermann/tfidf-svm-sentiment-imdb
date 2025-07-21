@@ -7,7 +7,6 @@ and logs performance metrics.
 # ─── Standard Library Imports ────────────────────────────────────────────────────
 from pathlib import Path
 import sys
-import logging
 import yaml
 
 # ─── Path Setup ──────────────────────────────────────────────────────────────────
