@@ -5,26 +5,33 @@ import os
 import pytest
 from pathlib import Path
 import json
+import tempfile
 
-# ─── Import src to trigger logger setup ──────────────────────────────────────────
-import src 
 
-# ─── Project Imports ─────────────────────────────────────────────────────────────
 from src.config import logging_config
+logger = None
 
-# Make the test log file directory if it does not exist
-@pytest.hookimpl(tryfirst=True)
-def pytest_configure():
-    LOG_FILE = os.getenv("LOG_FILE") # Get the log file path from environment variable
-    if LOG_FILE:
-        Path(LOG_FILE).parent.mkdir(parents=True, exist_ok=True) # Ensure the directory exists
-    open(LOG_FILE, "w").close() # Clear the log file before tests start
+# Export pytest temp root to LOG_ROOT
+@pytest.fixture(scope="session", autouse=True)
+def export_pytest_temp_root(tmp_path_factory):
+    base_temp = tmp_path_factory.getbasetemp().resolve()
+    # Move 2 levels up to pytest-of-<user>
+    pytest_temp_root = base_temp.parents
+    os.environ["LOG_ROOT"] = str(pytest_temp_root)
 
-def pytest_sessionfinish(session, exitstatus):
-    # Initialize logger
+# Set up logging for the test session
+@pytest.fixture(scope="session", autouse=True)
+def setup_logging():
+    global logger
+    log_dir = os.getenv("LOG_DIR")
+    if log_dir:
+        Path(log_dir).parent.mkdir(parents=True, exist_ok=True)
+
     logger = logging_config.configure_logging()
 
-    # Print coverage summary if coverage.json exists
+
+def pytest_sessionfinish(session, exitstatus):
+
     coverage_path = "tests/logs/coverage.json"
 
     if os.path.exists(coverage_path):

@@ -13,6 +13,7 @@ CONFIG_DIR  = SRC_DIR / "config"
 TEST_DIR    = ROOT / "tests"
 LOG_DIR     = ROOT / "logs"
 SVM_DIR     = SRC_DIR / "svm"
+LOG_ROOT    = ROOT
 
 # ─── Data Directories ────────────────────────────────────────────────────────────
 TRAIN_DATA_DIR         = DATA_DIR / "aclImdb" / "train"
