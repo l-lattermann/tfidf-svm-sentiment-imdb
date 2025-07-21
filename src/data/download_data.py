@@ -1,7 +1,6 @@
 """Script to download and prepare the IMDb dataset for sentiment analysis."""
 
 # ─── Standard Library Imports ────────────────────────────────────────────────────
-import logging
 import sys
 from pathlib import Path
 import shutil
@@ -16,9 +15,9 @@ if str(ROOT) not in sys.path:
 
 # ─── Project Imports ─────────────────────────────────────────────────────────────
 from src.config.paths import DATA_DIR
+from src.config import logging_config
 
 # ─── Logging Setup ───────────────────────────────────────────────────────────────
-from src.config import logging_config
 logger = logging_config.configure_logging()
 
 

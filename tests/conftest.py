@@ -4,11 +4,13 @@
 import os
 import pytest
 from pathlib import Path
-import logging
 import json
 
 # ─── Import src to trigger logger setup ──────────────────────────────────────────
 import src 
+
+# ─── Project Imports ─────────────────────────────────────────────────────────────
+from src.config import logging_config
 
 # Make the test log file directory if it does not exist
 @pytest.hookimpl(tryfirst=True)
@@ -19,8 +21,8 @@ def pytest_configure():
     open(LOG_FILE, "w").close() # Clear the log file before tests start
 
 def pytest_sessionfinish(session, exitstatus):
-    from src.config import logging_config
-logger = logging_config.configure_logging()
+    # Initialize logger
+    logger = logging_config.configure_logging()
 
     # Print coverage summary if coverage.json exists
     coverage_path = "tests/logs/coverage.json"

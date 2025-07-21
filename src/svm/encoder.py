@@ -1,23 +1,14 @@
 """Script to load data, encode features, and apply preprocessing pipeline."""
 
-# ─── Standard Library Imports ────────────────────────────────────────────────────
-from pathlib import Path
-import sys
-import logging
-
-# ─── Path Setup ──────────────────────────────────────────────────────────────────
-PROJECT_ROOT = Path(__file__).resolve().parents[2]
-if str(PROJECT_ROOT) not in sys.path:
-    sys.path.append(str(PROJECT_ROOT))
-
 # ─── Third-Party Imports ─────────────────────────────────────────────────────────
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 # ─── Project Imports ─────────────────────────────────────────────────────────────
-from ..data.tfidf_dataset import TfidfDataset
+from src.data.tfidf_dataset import TfidfDataset
+from src.config import logging_config
+
 
 # ─── Logging Setup ───────────────────────────────────────────────────────────────
-from src.config import logging_config
 logger = logging_config.configure_logging()
 
 

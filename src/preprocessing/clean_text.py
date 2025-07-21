@@ -11,8 +11,10 @@
 import re
 import logging
 
-# ─── Set up logging ─────────────────────────────────────────────────────────────────────────────────
+# ─── Project Imports ───────────────────────────────────────────────────────────────────────
 from src.config import logging_config
+
+# ─── Set up logging ─────────────────────────────────────────────────────────────────────────────────
 logger = logging_config.configure_logging()
 
 

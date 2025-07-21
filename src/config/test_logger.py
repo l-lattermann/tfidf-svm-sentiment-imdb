@@ -5,8 +5,8 @@ root = Path(__file__).resolve().parents[1]
 if str(root) not in sys.path:
     sys.path.append(str(root))
     
-from src.config import logging_config
+import logging_config
 from src.config.paths import ROOT
-from src.config import logging_config
+import logging_config
 logger = logging_config.configure_logging()
 logger.info("Saving file to %s", ROOT / "data" / "file.txt")

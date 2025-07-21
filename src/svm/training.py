@@ -16,9 +16,10 @@ if str(PROJECT_ROOT) not in sys.path:
     sys.path.append(str(PROJECT_ROOT))
 
 # ─── Project Module Imports ──────────────────────────────────────────────────────
-from src.config.paths import TRAINING_PARAMS, ENCODED_DATA_DIR
-from src.data import data_loader
+from src.config.paths import TRAINING_PARAMS
 from src.data.tfidf_dataset import TfidfDataset
+from src.config import logging_config
+
 
 # ─── Third-Party Imports ─────────────────────────────────────────────────────────
 from tqdm import tqdm
@@ -27,7 +28,6 @@ from sklearn.metrics import classification_report
 from sklearn.model_selection import GridSearchCV
 
 # ─── Logging Setup ───────────────────────────────────────────────────────────────
-from src.config import logging_config
 logger = logging_config.configure_logging()
 
 # ─── Load Vectorizer Configuration ───────────────────────────────────────────────

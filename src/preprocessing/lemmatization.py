@@ -3,11 +3,10 @@
 # ─── Third-Party Imports ─────────────────────────────────────────────────────────────────────
 import spacy
 
-# ─── Standard Imports──────────────────────────────────────────────────────────────────────────
-import logging
+# ─── Project Imports ───────────────────────────────────────────────────────────────────────
+from src.config import logging_config
 
 # ─── Set up logging ───────────────────────────────────────────────────────────────────────────
-from src.config import logging_config
 logger = logging_config.configure_logging()
 
 

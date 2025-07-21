@@ -3,19 +3,15 @@
 # ─── Standard Library Imports ────────────────────────────────────────────────────
 from pathlib import Path
 import sys
-import logging
-
-# ─── Path Setup ──────────────────────────────────────────────────────────────────
-PROJECT_ROOT = Path(__file__).resolve().parents[2]
-if str(PROJECT_ROOT) not in sys.path:
-    sys.path.append(str(PROJECT_ROOT))
-
-# ─── Logging Setup ───────────────────────────────────────────────────────────────
-from src.config import logging_config
-logger = logging_config.configure_logging()
 
 # ─── Project Module Imports ──────────────────────────────────────────────────────
 from src.svm import encoder
+from src.config import logging_config
+
+
+# ─── Logging Setup ───────────────────────────────────────────────────────────────
+logger = logging_config.configure_logging()
+
 
 
 

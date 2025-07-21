@@ -3,7 +3,7 @@
 
 # ─── Standard Library Imports ────────────────────────────────────────────────────
 from pathlib import Path
-import logging
+from src.config import logging_config
 
 # ─── Third-Party Imports ─────────────────────────────────────────────────────────
 from sklearn.datasets import load_files
@@ -16,7 +16,7 @@ from src.data.tfidf_dataset import TfidfDataset
 from src.config.paths import CLEANED_DATA_TXT_DIR, ENCODED_DATA_DIR
 
 # ─── Set up logging ───────────────────────────────────────────────────────────────
-from src.config from src.config import logging_config
+
 logger = logging_config.configure_logging()
 
 

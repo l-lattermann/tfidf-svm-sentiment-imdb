@@ -1,7 +1,6 @@
 """Main routine orchestrating the download, cleaning, preprocessing, and training for the SVM model on the IMDb dataset."""
 
 # ─── Standard Library Imports ────────────────────────────────────────────────────
-import logging
 import argparse
 import yaml
 import itertools
@@ -10,6 +9,7 @@ import itertools
 import src.data as dat
 import src.preprocessing as prep
 import src.svm as svm
+from src.config import logging_config
 
 # ─── Path Imports ────────────────────────────────────────────────────────────────
 from src.config.paths import DATA_DIR, TRAIN_DATA_DIR, TEST_DATA_DIR, CLEANED_DATA_TXT_DIR ,CLEANED_TRAIN_DIR, CLEANED_TEST_DIR, ENCODED_DATA_DIR, TRAINING_PARAMS, MODEL_DIR
@@ -22,7 +22,6 @@ parser.add_argument('--skip-fine-tune-encoder', action='store_true', help="Skip 
 args = parser.parse_args()
 
 # ─── Logging Setup ───────────────────────────────────────────────────────────────
-from src.config import logging_config
 logger = logging_config.configure_logging()
 if args.test:
     logger.info("Running in TEST mode (20 samples).")

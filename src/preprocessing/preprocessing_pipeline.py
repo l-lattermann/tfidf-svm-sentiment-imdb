@@ -7,16 +7,14 @@ Combines various preprocessing steps such as cleaning, filtering, and lemmatizat
 from sklearn.utils import Bunch
 from tqdm import tqdm
 
-# ─── Local Application Imports ───────────────────────────────────────────────────
+# ─── Project Imports ───────────────────────────────────────────────────
 from . import clean_text
 from . import filters
 from . import lemmatization
+from src.config import logging_config
 
-# ─── Standard Imports──────────────────────────────────────────────────────────────────────────
-import logging
 
 # ─── Set up logging ───────────────────────────────────────────────────────────────────────────
-from src.config import logging_config
 logger = logging_config.configure_logging()
 
 

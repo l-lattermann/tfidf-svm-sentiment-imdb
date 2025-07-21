@@ -2,10 +2,11 @@
 
 # ─── Imports ─────────────────────────────────────────────────────────────────────
 import re
-import logging
+
+# ─── Project Imports ───────────────────────────────────────────────────────────────────────
+from src.config import logging_config
 
 # ─── Set up logging ─────────────────────────────────────────────────────────
-from src.config import logging_config
 logger = logging_config.configure_logging()
 
 def expand_contractions(text):
