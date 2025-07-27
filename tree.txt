@@ -1,0 +1,51 @@
+.
+├── logs
+│   └── 2025-07-27_14-14-07_project.log
+├── models
+├── pytest.ini
+├── README.md
+├── requirements.txt
+├── reset_directory.py
+├── scratch.py
+├── src
+│   ├── __init__.py
+│   ├── config
+│   │   ├── logging_config.py
+│   │   ├── paths.py
+│   │   ├── test_logger.py
+│   │   └── training_params.yaml
+│   ├── preprocessing
+│   │   ├── __init__.py
+│   │   ├── clean_text.py
+│   │   ├── filters.py
+│   │   ├── lemmatization.py
+│   │   └── preprocessing_pipeline.py
+│   └── svm
+│       ├── __init__.py
+│       ├── prediction
+│       │   ├── __init__.py
+│       │   └── prediction_pipeline.py
+│       └── training
+│           ├── __init__.py
+│           ├── gridsearch_trainer.py
+│           └── vectorizer.py
+├── tests
+│   ├── __init__.py
+│   ├── config
+│   │   └── test_config_yaml.py
+│   ├── conftest.py
+│   ├── logs
+│   │   ├── 2025-07-21_13-18-31_test.log
+│   │   └── coverage.json
+│   ├── preprocessing
+│   │   ├── __init__.py
+│   │   ├── test_cleaning.py
+│   │   ├── test_filters.py
+│   │   ├── test_lemmatization.py
+│   │   └── test_preprocessing_pipeline.py
+│   └── web_scraping
+│       └── test_webscraping.py
+├── training_pipeline.py
+└── tree.txt
+
+14 directories, 59 files

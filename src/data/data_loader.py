@@ -3,9 +3,9 @@
 
 # ─── Standard Library Imports ────────────────────────────────────────────────────
 from pathlib import Path
-from src.config import logging_config
 
 # ─── Third-Party Imports ─────────────────────────────────────────────────────────
+from src.config import logging_config
 from sklearn.datasets import load_files
 from sklearn.utils import Bunch
 from sklearn.model_selection import GridSearchCV
