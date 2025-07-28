@@ -20,7 +20,7 @@ def a ():
     y_test = []
     path_neg = Path(TEST_DATA_DIR) / "neg"
     path_pos = Path(TEST_DATA_DIR) / "pos"
-    samples = 20
+    samples = 500
     logger.info("Loading %d samples from the test set for prediction", samples*2)
 
 

@@ -60,7 +60,7 @@ def train_svm_model(data: TfidfDataset):
 
     # Grid Search
     tqdm.write("Starting Grid Search...")
-    grid = GridSearchCV(svm, param_grid, cv=3, scoring='accuracy', n_jobs=-1)
+    grid = GridSearchCV(svm, param_grid, cv=3, scoring='f1', n_jobs=-1)
     grid.fit(data.X_train, data.y_train)
     tqdm.write("Grid Search completed.")
 

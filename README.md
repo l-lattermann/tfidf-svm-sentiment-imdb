@@ -8,8 +8,8 @@ This repository contains a complete pipeline to perform sentiment analysis on th
 ```
               precision    recall  f1-score   support
 
-         neg       0.91      0.89      0.90      4968
-         pos       0.89      0.92      0.90      5032
+         neg       0.91      0.88      0.90      4968
+         pos       0.89      0.91      0.90      5032
 
     accuracy                           0.90     10000
    macro avg       0.90      0.90      0.90     10000
