@@ -45,7 +45,6 @@ weighted avg       0.90      0.90      0.90     10000
 │   ├── config/                           # Configuration and logging
 │   │   ├── logging_config.py             # Logging setup
 │   │   ├── paths.py                      # Centralized file paths
-│   │   ├── test_logger.py                # Logger test script
 │   │   └── training_params.yaml          # Model training parameters
 
 │   ├── data/                             # Data ingestion and structuring
@@ -79,7 +78,6 @@ weighted avg       0.90      0.90      0.90     10000
 │   │   └── coverage.json                 # Coverage metadata
 │   └── web_scraping/                     # Web scraping tests
 │       └── test_webscraping.py           # Scraper unit test
-
 ├── pytest.ini                            # Pytest configuration
 
 ├── training_pipeline.py                  # Main training entry point
