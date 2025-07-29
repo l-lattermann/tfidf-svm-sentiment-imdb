@@ -1,2 +1,2 @@
-from . import training, prediction
-__all__ = ["training", "prediction"]
+from . import training
+__all__ = ["training"]

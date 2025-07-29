@@ -1,0 +1,28 @@
+2025-07-29 23:00:26,901 - INFO - Using existing spaCy model 'en_core_web_sm'.
+2025-07-29 23:00:27,388 - INFO - Loading 2000 samples from the test set for prediction
+2025-07-29 23:00:27,409 - INFO - Loading negative reviews from project_root/data/aclImdb/test/neg
+2025-07-29 23:00:27,409 - INFO - Loading positive reviews from project_root/data/aclImdb/test/pos
+2025-07-29 23:00:27,713 - INFO - Loading vectorizer from project_root/models
+2025-07-29 23:00:27,713 - INFO - Found 1 vectorizer files
+2025-07-29 23:00:27,713 - INFO - Loading encoder from project_root/models/vectorizer__max_features=80000-ngram_range=1_2-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=True.joblib
+2025-07-29 23:00:28,195 - INFO - Encoder loaded successfully
+2025-07-29 23:00:28,195 - INFO - Using vectorizer file: project_root/models/vectorizer__max_features=80000-ngram_range=1_2-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=True.joblib
+2025-07-29 23:00:28,195 - INFO - Loading model from project_root/models
+2025-07-29 23:00:28,195 - INFO - Found 1 model files
+2025-07-29 23:00:28,196 - INFO - Loading SVM model from project_root/models/svm__max_features=80000-ngram_range=1_2-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=True.joblib
+2025-07-29 23:00:28,198 - INFO - SVM model loaded successfully
+2025-07-29 23:00:28,198 - INFO - Using model file: project_root/models/svm__max_features=80000-ngram_range=1_2-stop_words=english-lowercase=True-use_idf=True-smooth_idf=True-sublinear_tf=True.joblib
+2025-07-29 23:00:28,199 - INFO - Encoding the data
+2025-07-29 23:00:28,505 - INFO - Encoded data shape: (2000, 80000)
+2025-07-29 23:00:28,505 - INFO - Encoded data type: <class 'scipy.sparse._csr.csr_matrix'>
+2025-07-29 23:00:28,506 - INFO - Making predictions
+2025-07-29 23:00:28,512 - INFO - Classification Report:
+              precision    recall  f1-score   support
+
+         neg       0.92      0.88      0.90      1000
+         pos       0.88      0.93      0.90      1000
+
+    accuracy                           0.90      2000
+   macro avg       0.90      0.90      0.90      2000
+weighted avg       0.90      0.90      0.90      2000
+

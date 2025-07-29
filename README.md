@@ -29,17 +29,63 @@ weighted avg       0.90      0.90      0.90     10000
 
 ```
 .
-├── data                      # Raw and cleaned data storage
-├── models                    # Trained SVM models
-├── logs                      # Log files
-├── src
-│   ├── config                # Configuration files and paths
-│   ├── data                  # Data downloading and loading utilities
-│   ├── preprocessing         # Text preprocessing modules
-│   └── svm                   # TF-IDF encoding and SVM training
-├── main.py                   # Main pipeline script
-├── requirements.txt          # Project dependencies
-└── README.md                 # Project documentation
+├── logs/                                 # Runtime logs and metadata
+├── models/                               # Saved ML models and vectorizers
+
+├── data/                                 # Raw and processed data storage
+│   ├── aclImdb/                          # Original IMDb dataset
+│   │   ├── aclImdb.zip                   # Zipped dataset file
+│   │   ├── test/                         # Raw test data
+│   │   └── train/                        # Raw train data
+│   └── cleaned_txt/                      # Cleaned text data
+│       ├── test/                         # Cleaned test data
+│       └── train/                        # Cleaned train data
+
+├── src/                                  # Source code
+│   ├── config/                           # Configuration and logging
+│   │   ├── logging_config.py             # Logging setup
+│   │   ├── paths.py                      # Centralized file paths
+│   │   ├── test_logger.py                # Logger test script
+│   │   └── training_params.yaml          # Model training parameters
+
+│   ├── data/                             # Data ingestion and structuring
+│   │   ├── data_classes.py               # Data class definitions
+│   │   ├── data_loader.py                # Data loading functions
+│   │   └── download_data.py              # Dataset download script
+
+│   ├── preprocessing/                    # Text preprocessing logic
+│   │   ├── clean_text.py                 # Text cleaning steps
+│   │   ├── filters.py                    # Stopword and regex filters
+│   │   ├── lemmatization.py              # Lemmatization functions
+│   │   └── preprocessing_pipeline.py     # Combined preprocessing flow
+
+│   └── svm/                              # SVM-specific components
+│       └── training/
+│           ├── gridsearch_trainer.py     # SVM training with hyperparameter search
+│           └── vectorizer.py             # TF-IDF vectorizer setup
+
+├── tests/                                # Unit tests
+│   ├── conftest.py                       # Shared fixtures
+│   ├── config/                           # Config-related tests
+│   │   └── test_config_yaml.py           # YAML config test
+│   ├── data/                             # Data module tests
+│   │   └── test_data_loader.py           # Tests for data loader
+│   ├── preprocessing/                    # Preprocessing tests
+│   │   ├── test_cleaning.py              # Cleaning test cases
+│   │   ├── test_filters.py               # Filter logic tests
+│   │   ├── test_lemmatization.py         # Lemmatization tests
+│   │   └── test_preprocessing_pipeline.py# Pipeline integration tests
+│   ├── logs/                             # Log output testing
+│   │   └── coverage.json                 # Coverage metadata
+│   └── web_scraping/                     # Web scraping tests
+│       └── test_webscraping.py           # Scraper unit test
+
+├── pytest.ini                            # Pytest configuration
+
+├── training_pipeline.py                  # Main training entry point
+├── prediction_pipeline.py                # Main inference script
+├── requirements.txt                      # Python dependencies
+└── README.md                             # Project description and instructions
 ```
 
 ## Installation
