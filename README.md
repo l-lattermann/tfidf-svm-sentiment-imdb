@@ -114,14 +114,6 @@ pip install -r requirements.txt
 
 ## Usage
 
-### Basic Usage
-
-Run the complete pipeline:
-
-```bash
-python main.py
-```
-
 ### Optional Arguments
 
 - `--test`: Run the pipeline in test mode with 20 samples.
@@ -131,7 +123,21 @@ python main.py
 Example:
 
 ```bash
-python main.py --test
+
+python training_pipeline.py --test
+
+```
+
+### Basic Usage
+
+Run the complete pipeline:
+
+```bash
+# Testrun, downloading, preprocessing the Data (60secons on Mac M2)
+python training_pipeline.py --test
+
+# Test deploy the Model for inference
+python prediction_pipeline.py
 ```
 
 ## Pipeline Steps
