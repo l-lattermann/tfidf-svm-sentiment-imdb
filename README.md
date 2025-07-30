@@ -136,7 +136,7 @@ python training_pipeline.py --test
 Run the complete pipeline:
 
 ```bash
-# Testrun, downloading, preprocessing the Data (60secons on Mac M2)
+# Testrun, downloading, preprocessing the Data (60seconds on Mac M2)
 python training_pipeline.py --test
 
 # Test deploy the Model for inference
