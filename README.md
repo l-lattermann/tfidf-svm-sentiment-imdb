@@ -30,7 +30,11 @@ weighted avg       0.90      0.90      0.90     10000
 ```
 .
 ├── logs/                                 # Runtime logs and metadata
+│   ├── training.log                      # Log output from training pipeline
+│   └── prediction.log                    # Log output from prediction pipeline
 ├── models/                               # Saved ML models and vectorizers
+│   ├── vectorizer.joblib                 # Optimal Vectorizer
+│   └── model.joblib                      # Optimal Model
 
 ├── data/                                 # Raw and processed data storage
 │   ├── aclImdb/                          # Original IMDb dataset
@@ -75,9 +79,8 @@ weighted avg       0.90      0.90      0.90     10000
 │   │   ├── test_lemmatization.py         # Lemmatization tests
 │   │   └── test_preprocessing_pipeline.py# Pipeline integration tests
 │   ├── logs/                             # Log output testing
+│   │   ├── test.log                      # Log output from pytest
 │   │   └── coverage.json                 # Coverage metadata
-│   └── web_scraping/                     # Web scraping tests
-│       └── test_webscraping.py           # Scraper unit test
 ├── pytest.ini                            # Pytest configuration
 
 ├── training_pipeline.py                  # Main training entry point
